@@ -1,6 +1,5 @@
 ---
 title: "Monkey Phill"
-type: "mascot"
 date: 2018-01-27T22:26:36Z
 slug: "monkeyphill"
 description: "A Scout mascot from Leicester, UK."
@@ -14,7 +13,8 @@ tags:
 - Geocaching
 
 resources:
-- src: "harborough-rocks-selfie.jpg"
+- src: "monkey-phill.jpg"
+  title: "Monkey Phill taking a selfie with rolling green hills behind."
   params:
     anchor: "left"
 
