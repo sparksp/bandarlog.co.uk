@@ -3,6 +3,7 @@ title: "Monkey Phill"
 type: "mascot"
 date: 2018-01-27T22:26:36Z
 slug: "monkeyphill"
+description: "A Scout mascot from Leicester, UK."
 
 tags:
 - Scouting
@@ -17,6 +18,8 @@ resources:
   params:
     anchor: "left"
 
+twitter: "https://twitter.com/MonkeyPhill"
+
 social:
 - icon: "fab fa-facebook"
   href: "https://facebook.com/monkeyphill"
@@ -28,4 +31,6 @@ social:
   href: "https://twitter.com/MonkeyPhill"
   title: "Twitter"
 ---
-Hi everyone, I'm a Monkey called Phill. It gets very confusing when people call me Monkey because we have a leader at Sapcote called Monkey too!
+A Scout mascot from Leicester, UK.
+
+It gets very confusing when people call me "Monkey" because we have a leader called "Monkey" too!

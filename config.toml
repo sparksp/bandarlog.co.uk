@@ -12,3 +12,5 @@ googleAnalytics = "dev"
 [Params.Author]
   Name = "Phill Sparks"
   Homepage = "https://phills.me.uk/"
+  Facebook = "https://facebook.com/sparks.phill"
+  Twitter = "https://twitter.com/PhillSparks"

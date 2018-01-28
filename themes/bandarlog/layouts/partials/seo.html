@@ -3,8 +3,14 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
+{{- if .Params.Twitter }}
+<meta name="twitter:site" content="{{ .Params.Twitter }}">
+{{- else if .Site.Params.Twitter }}
 <meta name="twitter:site" content="{{ .Site.Params.Twitter }}">
-<meta name="twitter:creator" content="{{ .Site.Params.Twitter }}">
+{{- end }}
+{{- with .Site.Params.Author.Twitter }}
+<meta name="twitter:creator" content="{{ . }}">
+{{- end }}
 {{- with .Resources.ByType "image" }}
   <meta name="twitter:card" content="summary_large_image">
   {{- range . }}
@@ -15,10 +21,6 @@
   {{- end }}
 {{- else }}
   <meta name="twitter:card" content="summary">
-  <meta property="og:image" content="{{ "/img/phills.jpg" | absURL }}">
-  <meta property="og:image:alt" content="Photo of Phill Sparks drinking a cup of coffee">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
 {{- end }}
 {{- if not .Lastmod.IsZero }}
   <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}">
@@ -49,8 +51,8 @@
   {{- with .Site.Title }}
     <meta property="og:site_name" content="{{ . }}">
   {{- end }}
-  {{- with .Site.Params.Facebook }}
-    <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+  {{- with .Site.Params.Author.Facebook }}
+    <meta property="article:author" content="{{ . }}">
   {{- end }}
   <meta property="article:section" content="{{ .CurrentSection.Title }}">
 {{- end }}
