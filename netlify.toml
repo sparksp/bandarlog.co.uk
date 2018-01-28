@@ -1,0 +1,18 @@
+[build]
+  publish = "public"
+  command = "HUGO_BASEURL=$URL hugo"
+
+[build.environment]
+  HUGO_VERSION = "0.34"
+
+[context.deploy-preview]
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL hugo --i18n-warnings"
+
+[context.deploy-preview.environment]
+  HUGO_GOOGLEANALYTICS = "dev"
+
+[context.branch-deploy]
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL hugo --i18n-warnings --buildDrafts"
+
+[context.branch-deploy.environment]
+  HUGO_GOOGLEANALYTICS = "dev"
