@@ -1,30 +1,46 @@
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+}
 .header {
-    background-color: rgba(255, 255, 255, .9);
-    box-shadow: 0 1px rgba(0, 0, 0, .3);
-    padding: 1em;
+    flex: 0 1 auto;
+    padding: 0 1em;
     position: sticky;
     top: 0;
+}
+.content {
+    flex: 1 1 auto;
+    padding: 0 1em;
+}
+.footer {
+    flex: 0 1 40px;
+    padding: 0 1em;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, .9);
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+.header h1 {
+    font-size: 1.2em;
 }
 .header a {
     text-decoration: none;
     color: black;
-    font-size: 1.2em
-}
-
-.content {
-    margin: 0 1em;
 }
 
 .footer {
+    background-color: rgba(255, 255, 255, .9);
     border-top: 1px solid rgba(0, 0, 0, .3);
-    padding: 0 1em;
 }
 
-.mascot.page {
-    background-color: green;
-}
 .mascot.page .content {
-    margin: 0;
+    padding: 0;
+    background-color: green;
 }
 .mascot.page article {
     text-align: center;
@@ -34,6 +50,6 @@
     padding: 1em;
 }
 .mascot.page img {
-    margin-top: -150px;
-    border: .5em solid white;
+    margin-top: -166px;
+    border: 8px solid white;
 }
