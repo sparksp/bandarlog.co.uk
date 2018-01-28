@@ -25,7 +25,7 @@
     text-align: center;
     background-color: white;
     max-width: 600px;
-    margin: 150px auto 2em;
+    margin: 150px auto 0;
     padding: 1em;
 }
 .mascot.page img {
