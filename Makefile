@@ -4,7 +4,7 @@ target = public
 all : $(target) ;
 
 $(target) :
-	hugo --i18n-warnings -d $@
+	hugo --i18n-warnings --gc -d $@
 
 .PHONY : clean
 clean :

@@ -5,3 +5,10 @@ theme = "bandarlog"
 enableRobotsTxt = true
 enableGitInfo = true
 googleAnalytics = "dev"
+
+[permalinks]
+  mascot = "/:slug/"
+
+[Params.Author]
+  Name = "Phill Sparks"
+  Homepage = "https://phills.me.uk/"

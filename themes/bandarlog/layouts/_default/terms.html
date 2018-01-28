@@ -3,9 +3,9 @@
   <h2>{{ .Title }}</h2>
   {{ .Content }}
   <ul class="panel-body">
-  {{ range .Data.Pages }}
+    {{- range .Data.Pages }}
     <li><a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a></li>
-  {{ end }}
+    {{ end }}
   </ul>
 </article>
 {{ end }}
