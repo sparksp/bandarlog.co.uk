@@ -22,7 +22,7 @@
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
     {{- end }}
   </head>
-  <body class="{{ .Section }} {{ .Kind }}">
+  <body class="{{ .Section | default "special" }}-{{ .Kind }}">
     <div class="header">
       <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
     </div>

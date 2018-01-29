@@ -38,18 +38,22 @@ body {
     border-top: 1px solid rgba(0, 0, 0, .3);
 }
 
-.mascot.page .content {
-    padding: 0;
+.mascot-page .content {
     background-color: green;
+    padding: 0;
 }
-.mascot.page article {
-    text-align: center;
+.error-page .content {
+    background-color: darkred;
+    padding: 0;
+}
+.mascot-page article, .error-page article {
     background-color: white;
-    max-width: 600px;
     margin: 150px auto 0;
+    max-width: 600px;
     padding: 1em;
+    text-align: center;
 }
-.mascot.page img {
-    margin-top: -166px;
+.mascot-page img, .error-page img {
     border: 8px solid white;
+    margin-top: -166px;
 }
