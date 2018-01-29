@@ -1,6 +1,6 @@
 baseURL = "http://bandarlog.co.uk/"
 languageCode = "en-GB"
-title = "Bandar Log"
+title = "1st Bandar-log"
 theme = "bandarlog"
 enableRobotsTxt = true
 enableGitInfo = true
