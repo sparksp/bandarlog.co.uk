@@ -9,10 +9,14 @@ tags:
 - Adventure
 
 resources:
-# - src: "christmas-oops.jpg"
-#   title: "Oops is hanging from the stairs with a red bauble and some tinsel."
+- src: "christmas-oops.jpg"
+  title: "Oops is hanging from the stairs with a red bauble and some tinsel."
 
-# twitter: "https://twitter.com/OopsMascot"
+twitter: "https://twitter.com/38theandn"
+
+author:
+    twitter: "https://twitter.com/38theandn"
+    facebook: "https://www.facebook.com/s.c.paget"
 
 social:
 # - icon: "fab fa-facebook"
@@ -21,9 +25,9 @@ social:
 # - icon: "fab fa-instagram"
 #   href: "https://instagram.com/OopsMascot"
 #   title: "Instagram"
-# - icon: "fab fa-twitter"
-#   href: "https://twitter.com/OopsMascot"
-#   title: "Twitter"
+- icon: "fab fa-twitter"
+  href: "https://twitter.com/38theandn"
+  title: "Twitter"
 ---
 Oops is adventurous, cheeky & the perfect Scout Troop mascot.
 

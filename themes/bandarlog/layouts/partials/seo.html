@@ -8,8 +8,10 @@
 {{- else if .Site.Params.Twitter }}
 <meta name="twitter:site" content="{{ .Site.Params.Twitter }}">
 {{- end }}
-{{- with .Site.Params.Author.Twitter }}
-<meta name="twitter:creator" content="{{ . }}">
+{{- if .Params.Author.Twitter }}
+<meta name="twitter:creator" content="{{ .Params.Author.Twitter }}">
+{{- else if .Site.Params.Author.Twitter }}
+<meta name="twitter:creator" content="{{ .Site.Params.Author.Twitter }}">
 {{- end }}
 {{- with .Resources.ByType "image" }}
   <meta name="twitter:card" content="summary_large_image">
@@ -51,8 +53,10 @@
   {{- with .Site.Title }}
     <meta property="og:site_name" content="{{ . }}">
   {{- end }}
-  {{- with .Site.Params.Author.Facebook }}
-    <meta property="article:author" content="{{ . }}">
+  {{- if .Params.Author.Facebook }}
+    <meta property="article:author" content="{{ .Params.Author.Facebook }}">
+  {{- else if .Site.Params.Author.Facebook }}
+    <meta property="article:author" content="{{ .Site.Params.Author.Facebook }}">
   {{- end }}
   <meta property="article:section" content="{{ .CurrentSection.Title }}">
 {{- end }}
