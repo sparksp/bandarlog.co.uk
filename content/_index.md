@@ -1,6 +1,9 @@
 ---
 title: "1st Bandar-log"
 description: "The 1st Bandar-log is a group of Scouting and Guiding mascots."
+menu:
+  main:
+    name: "About"
 ---
 # 1st Bandar-log
 

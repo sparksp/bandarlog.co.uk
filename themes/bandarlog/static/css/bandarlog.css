@@ -17,7 +17,7 @@ body {
     padding: 0 1em;
 }
 .footer {
-    flex: 0 1 40px;
+    flex: 0 1 2em;
     padding: 0 1em;
 }
 
@@ -26,18 +26,29 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     color: black;
 }
-.header h1 {
+.header .pure-menu-heading {
     font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 1em 0 0;
+    text-transform: none;
 }
 .header a {
     text-decoration: none;
     color: black;
+}
+.header .pure-menu-selected {
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .footer {
     background-color: rgba(255, 255, 255, .9);
     border-top: 1px solid rgba(0, 0, 0, .3);
     color: black;
+}
+
+.footer p {
+    margin: .5em 0;
 }
 
 .mascot-page .content {

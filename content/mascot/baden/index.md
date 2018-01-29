@@ -3,6 +3,10 @@ title: "Baden"
 date: 2018-01-29T12:25:28Z
 description: "A keen and eager cub mascot from Leicester, UK."
 
+menu:
+  main:
+    parent: "Mascots"
+
 tags:
 - Scouting
 - Cub Scout

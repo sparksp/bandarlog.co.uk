@@ -24,7 +24,14 @@
   </head>
   <body class="{{ .Section | default "special" }}-{{ .Kind }}">
     <div class="header">
-      <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+      <div class="pure-menu pure-menu-horizontal pull-right">
+        <p class="pure-menu-heading"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
+        <ul class="pure-menu-list">
+          {{- range .Site.Menus.main }}
+          <li class="pure-menu-item{{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} pure-menu-selected{{end}}"><a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
     </div>
 
     <div class="content">
