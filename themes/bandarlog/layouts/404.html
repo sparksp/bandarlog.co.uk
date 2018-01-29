@@ -1,4 +1,10 @@
+{{ define "title" }}
+{{- with .Site.GetPage "page" "404/index.md" }}
+{{ .Title }} - {{ .Site.Title }}
+{{- end }}
+{{ end }}
 {{ define "main" }}
+{{- with .Site.GetPage "page" "404/index.md" }}
 <article class="single">
   <header>
     {{- range .Resources.ByType "image" }}
@@ -27,5 +33,6 @@
   </ul></div>
   {{- end }}
 </article>
+{{- end }}
 {{ end }}
 {{ define "footer" }}<!-- no footer -->{{ end }}

@@ -1,4 +1,5 @@
 ---
+headless: true
 title: 404 Not Found
 url: "404.html"
 
