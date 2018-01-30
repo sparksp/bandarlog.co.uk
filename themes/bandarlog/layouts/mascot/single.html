@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="single">
   <header>
-    {{- range .Resources.ByType "image" }}
+    {{- range .Resources.ByType "image" | first 1 }}
     {{ $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
     <p><img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}"></p>
     {{- end }}
