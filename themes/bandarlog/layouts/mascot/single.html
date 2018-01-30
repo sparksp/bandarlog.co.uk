@@ -22,7 +22,7 @@
   {{- with .Params.social }}
   <div class="social-menu pure-menu pure-menu-horizontal"><ul class="pure-menu-list">
   {{- range . }}
-    <li class="pure-menu-item"><a href="{{ .href | safeURL }}" class="pure-menu-link"><i class="{{ .icon }} fa-2x" title="{{ .title }}"></i></a></li>
+    <li class="pure-menu-item"><a href="{{ .href | safeURL }}" class="pure-menu-link"><i class="{{ .icon | default "fa fa-link" }} fa-2x" title="{{ .title }}"></i></a></li>
   {{- end }}
   </ul></div>
   {{- end }}
