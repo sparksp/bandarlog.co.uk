@@ -24,6 +24,7 @@ body {
 .header {
     background-color: rgba(255, 255, 255, .9);
     border-bottom: 1px solid rgba(0, 0, 0, .3);
+    color: black;
 }
 .header h1 {
     font-size: 1.2em;
@@ -36,18 +37,22 @@ body {
 .footer {
     background-color: rgba(255, 255, 255, .9);
     border-top: 1px solid rgba(0, 0, 0, .3);
+    color: black;
 }
 
 .mascot-page .content {
     background-color: green;
+    color: white;
     padding: 0;
 }
 .special-404 .content {
     background-color: darkred;
+    color: white;
     padding: 0;
 }
 .mascot-page article, .special-404 article {
     background-color: white;
+    color: black;
     margin: 150px auto 0;
     max-width: 600px;
     padding: 1em;
@@ -56,4 +61,38 @@ body {
 .mascot-page img, .special-404 img {
     border: 8px solid white;
     margin-top: -166px;
+}
+
+.mascot-section .content {
+    background-color: green;
+    color: white;
+}
+.tags-taxonomy .content {
+    background-color: navy;
+    color: white;
+}
+
+.mascot-list {
+    text-align: center;
+    margin: 1em 0;
+}
+.mascot-item {
+    display: inline-block;
+}
+.mascot-link {
+    background-color: rgba(255, 255, 255, .8);
+    color: black;
+    display: block;
+    margin: .5em;
+    padding: .5em;
+    text-decoration: none;
+}
+.mascot-link:hover {
+    background-color: white;
+    color: black;
+}
+.mascot-name {
+    display: block;
+    margin-top: .5em;
+    text-align: center;
 }
