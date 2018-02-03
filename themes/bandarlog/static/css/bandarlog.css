@@ -22,15 +22,15 @@ body {
 }
 
 .header {
-    background-color: rgba(255, 255, 255, .9);
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    background-color: white;
+    border-bottom: 1px solid #b2b2b2;
     color: black;
 }
 .header .pure-menu-heading {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     margin: 0;
-    padding: 0 1em 0 0;
+    padding: .5em 1em .5em 0;
     text-transform: none;
 }
 .header a {
@@ -38,7 +38,32 @@ body {
     color: black;
 }
 .header .pure-menu-selected {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: #fafafa;
+}
+
+#main-menu {
+    font-size: 0;
+}
+#main-menu:target, #main-menu[aria-expanded="true"] {
+    font-size: 1em;
+}
+#main-menu ul {
+    transition: font-size .3s ease-out;
+}
+
+.header .container {
+    position: relative;
+}
+.menu-toggle, .menu-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 1em;
+    height: auto;
+    background-color: white;
+}
+.menu-toggle[aria-expanded="true"] {
+    display: none;
 }
 
 .footer {
