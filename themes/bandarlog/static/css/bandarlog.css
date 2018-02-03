@@ -8,7 +8,6 @@ body {
 }
 .header {
     flex: 0 1 auto;
-    padding: 0 1em;
     position: sticky;
     top: 0;
 }
@@ -56,6 +55,9 @@ body {
     transition: font-size .3s ease-out;
 }
 
+.action-list .pure-menu-link {
+    padding: .5em;
+}
 .action-list .menu-close {
     display: none;
 }
