@@ -1,0 +1,5 @@
+---
+title: "Mascots"
+
+menu: "main"
+---

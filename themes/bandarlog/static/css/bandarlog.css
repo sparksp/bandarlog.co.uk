@@ -8,7 +8,6 @@ body {
 }
 .header {
     flex: 0 1 auto;
-    padding: 0 1em;
     position: sticky;
     top: 0;
 }
@@ -17,7 +16,7 @@ body {
     padding: 0 1em;
 }
 .footer {
-    flex: 0 1 40px;
+    flex: 0 1 2em;
     padding: 0 1em;
 }
 
@@ -26,18 +25,57 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     color: black;
 }
-.header h1 {
-    font-size: 1.2em;
+.header .pure-menu-heading {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    padding: .5em 1em .5em 0;
+    text-transform: none;
 }
 .header a {
     text-decoration: none;
     color: black;
+}
+.pure-menu-active > .pure-menu-link,
+.pure-menu-link:hover,
+.pure-menu-link:focus {
+    background-color: rgba(100,  100, 100, .2);
+}
+.pure-menu-selected {
+    background-color: rgba(100,  100, 100, .1);
+}
+
+.collapsible-menu {
+    font-size: 0;
+}
+:target .collapsible-menu, [aria-expanded="true"] .collapsible-menu {
+    font-size: 1em;
+}
+#main-menu ul {
+    transition: font-size .3s ease-out;
+}
+
+.action-list .pure-menu-link {
+    padding: .5em;
+}
+.action-list .menu-close {
+    display: none;
+}
+:target .action-list .menu-toggle {
+    display: none;
+}
+:target .action-list .menu-close {
+    display: inline-block;
 }
 
 .footer {
     background-color: rgba(255, 255, 255, .9);
     border-top: 1px solid rgba(0, 0, 0, .3);
     color: black;
+}
+
+.footer p {
+    margin: .5em 0;
 }
 
 .mascot-page .content {
@@ -87,7 +125,7 @@ body {
     padding: .5em;
     text-decoration: none;
 }
-.mascot-link:hover {
+.mascot-link:hover, .mascot-link:focus, .mascot-link:active {
     background-color: white;
     color: black;
 }

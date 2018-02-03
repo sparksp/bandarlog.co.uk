@@ -4,6 +4,10 @@ date: 2018-01-27T22:26:36Z
 slug: "monkeyphill"
 description: "A Scout mascot from Leicester, UK."
 
+menu:
+  main:
+    parent: "Mascots"
+
 tags:
 - Scouting
 - Climbing

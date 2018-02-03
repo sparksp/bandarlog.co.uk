@@ -3,6 +3,10 @@ title: "Media Bear"
 date: 2018-01-28T21:06:36Z
 description: "A Scout mascot from Leicester, UK."
 
+menu:
+  main:
+    parent: "Mascots"
+
 tags:
 - Adventure
 - Camping

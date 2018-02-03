@@ -3,6 +3,10 @@ title: "SCOGUI Bear"
 date: 2018-01-28T18:55:09Z
 description: "The unstealable club mascot of SCOGUI - Loughborough University."
 
+menu:
+  main:
+    parent: "Mascots"
+
 tags:
 - SSAGO
 

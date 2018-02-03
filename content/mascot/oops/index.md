@@ -3,6 +3,10 @@ title: "Oops"
 date: 2018-01-29T11:10:18Z
 description: "An adventurous & cheeky Scout Troop mascot from Leicester, UK."
 
+menu:
+  main:
+    parent: "Mascots"
+
 tags:
 - Scouting
 - Camping
