@@ -4,7 +4,7 @@ description: "The 1st Bandar-log is a group of Scouting and Guiding mascots."
 ---
 # 1st Bandar-log
 
-The 1st Bandar-log is a group of [Scouting](https://scouts.org.uk/home/) and [Guiding](https://www.girlguiding.org.uk/) mascots. Often small and cuddly creatures dressed in various scout/guide attire, coverted by young people and their leaders.
+The 1st Bandar-log is a group of [Scouting](https://scouts.org.uk/home/) and [Guiding](https://www.girlguiding.org.uk/) mascots. Often small and cuddly creatures dressed in various scout/guide attire, coveted by young people and their leaders.
 
 ## Why Bandar-log?
 
