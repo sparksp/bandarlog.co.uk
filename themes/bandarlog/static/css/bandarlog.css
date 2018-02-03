@@ -51,17 +51,14 @@ body {
     transition: font-size .3s ease-out;
 }
 
-.menu-toggle, .menu-close {
-    float: right;
-}
-.menu-close {
+.action-list .menu-close {
     display: none;
 }
-:target .menu-toggle {
+:target .action-list .menu-toggle {
     display: none;
 }
-:target .menu-close {
-    display: initial;
+:target .action-list .menu-close {
+    display: inline-block;
 }
 
 .footer {
