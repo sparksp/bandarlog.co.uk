@@ -22,8 +22,8 @@ body {
 }
 
 .header {
-    background-color: white;
-    border-bottom: 1px solid #b2b2b2;
+    background-color: rgba(255, 255, 255, .9);
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
     color: black;
 }
 .header .pure-menu-heading {
@@ -41,29 +41,27 @@ body {
     background-color: #fafafa;
 }
 
-#main-menu {
+.collapsible-menu {
     font-size: 0;
 }
-#main-menu:target, #main-menu[aria-expanded="true"] {
+:target .collapsible-menu, [aria-expanded="true"] .collapsible-menu {
     font-size: 1em;
 }
 #main-menu ul {
     transition: font-size .3s ease-out;
 }
 
-.header .container {
-    position: relative;
-}
 .menu-toggle, .menu-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 1em;
-    height: auto;
-    background-color: white;
+    float: right;
 }
-.menu-toggle[aria-expanded="true"] {
+.menu-close {
     display: none;
+}
+:target .menu-toggle {
+    display: none;
+}
+:target .menu-close {
+    display: initial;
 }
 
 .footer {

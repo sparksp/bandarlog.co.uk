@@ -23,26 +23,26 @@
     {{- end }}
   </head>
   <body class="{{ .Section | default "special" }}-{{ .Kind }}">
-    <div class="header"><div class="container">
+    <div class="header" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
       <nav class="pure-menu pure-menu-horizontal">
-        <p class="pure-menu-heading"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
-        <a href="#main-menu" class="menu-toggle pure-menu-link" role="button" id="main-menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open main menu">
+        <a href="#main-menu" class="menu-toggle pure-menu-link" role="button" id="main-menu-toggle" aria-controls="main-menu" aria-label="Open main menu">
           <span class="sr-only">Open main menu</span>
           <span class="fas fa-bars" aria-hidden="true"></span>
         </a>
-      </nav>
-      <nav class="pure-menu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
-        <a href="#" class="menu-close pure-menu-link" role="button" id="main-menu-close" aria-expanded="false" aria-controls="main-menu" aria-label="Close main menu">
+        <a href="#" class="menu-close pure-menu-link" role="button" id="main-menu-close" aria-controls="main-menu" aria-label="Close main menu">
           <span class="sr-only">Close main menu</span>
           <span class="fas fa-times" aria-hidden="true"></span>
         </a>
+        <p class="pure-menu-heading"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
+      </nav>
+      <nav class="pure-menu collapsible-menu">
         <ul class="pure-menu-list">
           {{- range .Site.Menus.main }}
           <li class="pure-menu-item{{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} pure-menu-selected{{end}}"><a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a></li>
           {{- end }}
         </ul>
       </nav>
-    </div></div>
+    </div>
 
     <div class="content">
       {{- block "main" . }}{{ end }}
