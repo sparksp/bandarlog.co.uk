@@ -3,7 +3,7 @@
   command = "HUGO_BASEURL=$URL hugo"
 
 [build.environment]
-  HUGO_VERSION = "0.35"
+  HUGO_VERSION = "0.36"
 
 [context.deploy-preview]
   command = "HUGO_BASEURL=$DEPLOY_PRIME_URL hugo --i18n-warnings"
