@@ -21,9 +21,7 @@ twitter = "https://twitter.com/38theandn"
 
 [[resources]]
 src = "baden.jpg"
-
-  [resources.params]
-  anchor = "top"
+title = "Baden sat on a worktop with a Cubs 100 challenge badge."
 +++
 Baden is a Cub. Always keen to please and eager to try new things. He would be the very best sixer if only he could make himself heard. He loves adventures, camping and new activities. His favourite thing is joining in the activities with the Cubs who often take him along to join in the fun!
 
