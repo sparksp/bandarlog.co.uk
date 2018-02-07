@@ -18,7 +18,7 @@ parent = "Mascots"
 [social]
 facebook = "monkeyphill"
 geocaching = "https://coord.info/TB6CANP"
-instagram = "https://instagram.com/monkeyphill"
+instagram = "monkeyphill"
 twitter = "MonkeyPhill"
 
 [[resources]]

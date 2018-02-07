@@ -11,7 +11,7 @@ parent = "Mascots"
 
 [social]
 facebook = "{{ .TranslationBaseName }}"
-instagram = "https://instagram.com/{{ .TranslationBaseName }}"
+instagram = "{{ .TranslationBaseName }}"
 twitter = "{{ .TranslationBaseName }}"
 
 [[resources]]
