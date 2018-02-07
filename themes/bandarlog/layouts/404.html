@@ -7,7 +7,7 @@
 {{- with .Site.GetPage "page" "404/index.md" }}
 <article class="single">
   <header>
-    {{- range .Resources.ByType "image" }}
+    {{- range .Resources.ByType "image" | first 1 }}
     {{ $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
     <p><img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}"></p>
     {{- end }}
@@ -17,21 +17,8 @@
 
   {{ .Content }}
 
-  {{- with .Params.tags }}
-  <p><i class="fa fa-tags" title="{{ . | len | i18n "Tags" }}"></i>
-  {{- range . }}
-    <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag tag-{{ . | urlize }}">{{ . }}</a>
-  {{- end }}
-  </p>
-  {{- end }}
-
-  {{- with .Params.social }}
-  <div class="social-menu pure-menu pure-menu-horizontal"><ul class="pure-menu-list">
-  {{- range . }}
-    <li class="pure-menu-item"><a href="{{ .href | safeURL }}" class="pure-menu-link"><i class="{{ .icon }} fa-2x" title="{{ .title }}"></i></a></li>
-  {{- end }}
-  </ul></div>
-  {{- end }}
+  {{- partial "tags" . }}
+  {{- partial "social-menu" . }}
 </article>
 {{- end }}
 {{ end }}
