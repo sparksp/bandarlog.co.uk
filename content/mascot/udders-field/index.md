@@ -11,7 +11,7 @@ tags = [
 parent = "Mascots"
 
 [social]
-facebook = "https://www.facebook.com/huddersfield.archery"
+facebook = "huddersfield.archery"
 twitter = "https://twitter.com/HudsArchery"
 
 [[resources]]

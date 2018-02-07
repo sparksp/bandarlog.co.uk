@@ -51,7 +51,7 @@
   <meta property="article:section" content="{{ .CurrentSection.Title }}">
 {{- end }}
 {{- if .Params.Author.Facebook }}
-<meta property="article:author" content="{{ .Params.Author.Facebook }}">
+<meta property="article:author" content="https://www.facebook.com/{{ .Params.Author.Facebook }}">
 {{- end }}
 {{- range .Params.tags }}
   <meta property="article:tag" content="{{ . }}">

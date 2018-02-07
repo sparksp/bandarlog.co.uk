@@ -12,7 +12,7 @@ tags = [
 parent = "Mascots"
 
 [author]
-facebook = "https://www.facebook.com/s.c.paget"
+facebook = "s.c.paget"
 
 [social]
 twitter = "https://twitter.com/38theandn"

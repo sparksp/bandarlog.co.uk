@@ -16,7 +16,7 @@ tags = [
 parent = "Mascots"
 
 [social]
-facebook = "https://facebook.com/monkeyphill"
+facebook = "monkeyphill"
 geocaching = "https://coord.info/TB6CANP"
 instagram = "https://instagram.com/monkeyphill"
 twitter = "https://twitter.com/MonkeyPhill"

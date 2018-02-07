@@ -15,7 +15,7 @@ tags = [
 parent = "Mascots"
 
 [social]
-facebook = "https://www.facebook.com/jamboreebear/"
+facebook = "jamboreebear"
 twitter = "https://twitter.com/jamboreebear"
 
 [[resources]]

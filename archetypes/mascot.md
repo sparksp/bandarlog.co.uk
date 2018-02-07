@@ -10,7 +10,7 @@ tags = [
 parent = "Mascots"
 
 [social]
-facebook = "https://facebook.com/{{ .TranslationBaseName }}"
+facebook = "{{ .TranslationBaseName }}"
 instagram = "https://instagram.com/{{ .TranslationBaseName }}"
 twitter = "https://twitter.com/{{ .TranslationBaseName }}"
 

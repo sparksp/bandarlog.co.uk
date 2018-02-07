@@ -10,7 +10,7 @@ tags = [
 parent = "Mascots"
 
 [social]
-facebook = "https://www.facebook.com/ScoguiTheBear/"
+facebook = "ScoguiTheBear"
 homepage = "http://scogui.org.uk/join-scogui/mascot"
 
 [[resources]]

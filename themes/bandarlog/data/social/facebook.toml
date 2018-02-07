@@ -1,2 +1,3 @@
-title = "Facebook"
+format = "https://www.facebook.com/%s"
 icon = "fab fa-facebook"
+title = "Facebook"
