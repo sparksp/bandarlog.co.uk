@@ -15,6 +15,10 @@ tags = [
 [menu.main]
 parent = "Mascots"
 
+[author]
+facebook = "sparks.phill"
+twitter = "PhillSparks"
+
 [social]
 facebook = "monkeyphill"
 geocaching = "https://coord.info/TB6CANP"
