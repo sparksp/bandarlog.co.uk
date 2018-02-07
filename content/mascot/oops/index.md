@@ -23,15 +23,7 @@ author:
     facebook: "https://www.facebook.com/s.c.paget"
 
 social:
-# - icon: "fab fa-facebook"
-#   href: "https://facebook.com/OopsMascot"
-#   title: "Facebook"
-# - icon: "fab fa-instagram"
-#   href: "https://instagram.com/OopsMascot"
-#   title: "Instagram"
-- icon: "fab fa-twitter"
-  href: "https://twitter.com/38theandn"
-  title: "Twitter"
+  twitter: "https://twitter.com/38theandn"
 ---
 Oops is adventurous, cheeky & the perfect Scout Troop mascot.
 

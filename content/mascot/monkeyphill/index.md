@@ -25,18 +25,10 @@ resources:
 twitter: "https://twitter.com/MonkeyPhill"
 
 social:
-- icon: "fab fa-facebook"
-  href: "https://facebook.com/monkeyphill"
-  title: "Facebook"
-- icon: "far fa-compass"
-  href: "https://coord.info/TB6CANP"
-  title: "Geocaching"
-- icon: "fab fa-instagram"
-  href: "https://instagram.com/monkeyphill"
-  title: "Instagram"
-- icon: "fab fa-twitter"
-  href: "https://twitter.com/MonkeyPhill"
-  title: "Twitter"
+  facebook: "https://facebook.com/monkeyphill"
+  geocaching: "https://coord.info/TB6CANP"
+  instagram: "https://instagram.com/monkeyphill"
+  twitter: "https://twitter.com/MonkeyPhill"
 ---
 A Scout mascot from Leicester, UK.
 

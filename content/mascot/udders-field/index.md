@@ -20,12 +20,8 @@ resources:
 twitter: "https://twitter.com/HudsArchery"
 
 social:
-- icon: "fab fa-facebook"
-  href: "https://www.facebook.com/huddersfield.archery"
-  title: "Facebook"
-- icon: "fab fa-twitter"
-  href: "https://twitter.com/HudsArchery"
-  title: "Twitter"
+  facebook: "https://www.facebook.com/huddersfield.archery"
+  twitter: "https://twitter.com/HudsArchery"
 ---
 
 Udders and Field are the Pennine Archers (in 'Uddersfield) Mascots!

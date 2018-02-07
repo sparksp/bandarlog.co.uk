@@ -21,9 +21,12 @@
 
   {{- with .Params.social }}
   <div class="social-menu pure-menu pure-menu-horizontal"><ul class="pure-menu-list">
-  {{- range . }}
-    <li class="pure-menu-item"><a href="{{ .href | safeURL }}" class="pure-menu-link"><i class="{{ .icon | default "fa fa-link" }} fa-2x" title="{{ .title }}"></i></a></li>
-  {{- end }}
+    {{- range $name, $href := . }}
+    {{- $data := index $.Site.Data.social $name | default $.Site.Data.social.default }}
+    {{- $icon := index $data "icon" | default "fa fa-link" }}
+    {{- $title := index $data "title" | default $name }}
+    <li class="pure-menu-item"><a href="{{ $href | safeURL }}" class="pure-menu-link"><i class="{{ $icon }} fa-2x" title="{{ $title }}"></i></a></li>
+    {{- end }}
   </ul></div>
   {{- end }}
 </article>

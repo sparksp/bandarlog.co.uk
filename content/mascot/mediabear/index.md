@@ -22,12 +22,8 @@ resources:
 twitter: "https://twitter.com/jamboreebear"
 
 social:
-- icon: "fab fa-facebook"
-  href: "https://www.facebook.com/jamboreebear/"
-  title: "Facebook"
-- icon: "fab fa-twitter"
-  href: "https://twitter.com/jamboreebear"
-  title: "Twitter"
+  facebook: "https://www.facebook.com/jamboreebear/"
+  twitter: "https://twitter.com/jamboreebear"
 ---
 Hi I'm Bear... Media Bear.  I like to think I'm like Bear Grylls.
 
