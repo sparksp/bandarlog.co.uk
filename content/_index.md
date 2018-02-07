@@ -4,6 +4,9 @@ description: "The 1st Bandar-log is a group of Scouting and Guiding mascots."
 menu:
   main:
     name: "About"
+author:
+  facebook: "https://facebook.com/sparks.phill"
+  twitter: "https://twitter.com/PhillSparks"
 ---
 # 1st Bandar-log
 
