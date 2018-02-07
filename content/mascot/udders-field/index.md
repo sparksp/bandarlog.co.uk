@@ -1,32 +1,26 @@
----
-title: "Udders & Field"
-date: 2018-02-07T09:37:26Z
-slug: "udders-field"
-description: "Udders and Field are the Pennine Archers (in 'Uddersfield) Mascots!"
++++
+title = "Udders & Field"
+date = 2018-02-07T09:37:26.000Z
+slug = "udders-field"
+description = "Udders and Field are the Pennine Archers (in 'Uddersfield) Mascots!"
+tags = [
+  "Archery",
+]
 
-menu:
-  main:
-    parent: "Mascots"
+[menu.main]
+parent = "Mascots"
 
-tags:
-- Archery
+[social]
+facebook = "huddersfield.archery"
+twitter = "HudsArchery"
 
-resources:
-- src: "udders-field.jpg"
-  title: "Udders and Field, two cows, are sat in a deck chair together."
-  params:
-    anchor: "center"
+[[resources]]
+src = "udders-field.jpg"
+title = "Udders and Field, two cows, are sat in a deck chair together."
 
-twitter: "https://twitter.com/HudsArchery"
-
-social:
-- icon: "fab fa-facebook"
-  href: "https://www.facebook.com/huddersfield.archery"
-  title: "Facebook"
-- icon: "fab fa-twitter"
-  href: "https://twitter.com/HudsArchery"
-  title: "Twitter"
----
+  [resources.params]
+  anchor = "center"
++++
 
 Udders and Field are the Pennine Archers (in 'Uddersfield) Mascots!
 

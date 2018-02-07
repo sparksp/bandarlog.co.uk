@@ -11,21 +11,8 @@
 
   {{ .Content }}
 
-  {{- with .Params.tags }}
-  <p><i class="fa fa-tags" title="{{ . | len | i18n "Tags" }}"></i>
-  {{- range . }}
-    <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag tag-{{ . | urlize }}">{{ . }}</a>
-  {{- end }}
-  </p>
-  {{- end }}
-
-  {{- with .Params.social }}
-  <div class="social-menu pure-menu pure-menu-horizontal"><ul class="pure-menu-list">
-  {{- range . }}
-    <li class="pure-menu-item"><a href="{{ .href | safeURL }}" class="pure-menu-link"><i class="{{ .icon | default "fa fa-link" }} fa-2x" title="{{ .title }}"></i></a></li>
-  {{- end }}
-  </ul></div>
-  {{- end }}
+  {{- partial "tags" . }}
+  {{- partial "social-menu" . }}
 </article>
 {{ end }}
 {{ define "footer" }}<!-- no footer -->{{ end }}

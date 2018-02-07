@@ -1,5 +1,4 @@
----
-title: "Mascots"
-
-menu: "main"
----
++++
+title = "Mascots"
+menu = "main"
++++

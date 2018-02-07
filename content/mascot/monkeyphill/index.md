@@ -1,43 +1,37 @@
----
-title: "Monkey Phill"
-date: 2018-01-27T22:26:36Z
-slug: "monkeyphill"
-description: "A Scout mascot from Leicester, UK."
++++
+title = "Monkey Phill"
+date = 2018-01-27T22:26:36.000Z
+slug = "monkeyphill"
+description = "A Scout mascot from Leicester, UK."
+tags = [
+  "Scouting",
+  "Climbing",
+  "Shooting",
+  "Archery",
+  "Dancing",
+  "Geocaching",
+]
 
-menu:
-  main:
-    parent: "Mascots"
+[menu.main]
+parent = "Mascots"
 
-tags:
-- Scouting
-- Climbing
-- Shooting
-- Archery
-- Dancing
-- Geocaching
+[author]
+facebook = "sparks.phill"
+twitter = "PhillSparks"
 
-resources:
-- src: "monkey-phill.jpg"
-  title: "Monkey Phill taking a selfie with rolling green hills behind."
-  params:
-    anchor: "left"
+[social]
+facebook = "monkeyphill"
+geocaching = "https://coord.info/TB6CANP"
+instagram = "monkeyphill"
+twitter = "MonkeyPhill"
 
-twitter: "https://twitter.com/MonkeyPhill"
+[[resources]]
+src = "monkey-phill.jpg"
+title = "Monkey Phill taking a selfie with rolling green hills behind."
 
-social:
-- icon: "fab fa-facebook"
-  href: "https://facebook.com/monkeyphill"
-  title: "Facebook"
-- icon: "far fa-compass"
-  href: "https://coord.info/TB6CANP"
-  title: "Geocaching"
-- icon: "fab fa-instagram"
-  href: "https://instagram.com/monkeyphill"
-  title: "Instagram"
-- icon: "fab fa-twitter"
-  href: "https://twitter.com/MonkeyPhill"
-  title: "Twitter"
----
+  [resources.params]
+  anchor = "left"
++++
 A Scout mascot from Leicester, UK.
 
 It gets very confusing when people call me "Monkey" because we have a leader called "Monkey" too!

@@ -1,10 +1,12 @@
----
-title: "1st Bandar-log"
-description: "The 1st Bandar-log is a group of Scouting and Guiding mascots."
-menu:
-  main:
-    name: "About"
----
++++
+title = "1st Bandar-log"
+description = "The 1st Bandar-log is a group of Scouting and Guiding mascots."
+[menu.main]
+  name = "About"
+[author]
+  facebook = "sparks.phill"
+  twitter = "PhillSparks"
++++
 # 1st Bandar-log
 
 The 1st Bandar-log is a group of [Scouting](https://scouts.org.uk/home/) and [Guiding](https://www.girlguiding.org.uk/) mascots. Often small and cuddly creatures dressed in various scout/guide attire, coveted by young people and their leaders.
