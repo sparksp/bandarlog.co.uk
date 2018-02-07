@@ -16,11 +16,8 @@ resources:
 - src: "christmas-oops.jpg"
   title: "Oops is hanging from the stairs with a red bauble and some tinsel."
 
-twitter: "https://twitter.com/38theandn"
-
 author:
-    twitter: "https://twitter.com/38theandn"
-    facebook: "https://www.facebook.com/s.c.paget"
+  facebook: "https://www.facebook.com/s.c.paget"
 
 social:
   twitter: "https://twitter.com/38theandn"

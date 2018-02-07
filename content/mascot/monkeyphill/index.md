@@ -22,8 +22,6 @@ resources:
   params:
     anchor: "left"
 
-twitter: "https://twitter.com/MonkeyPhill"
-
 social:
   facebook: "https://facebook.com/monkeyphill"
   geocaching: "https://coord.info/TB6CANP"

@@ -19,8 +19,6 @@ resources:
 - src: "media-bear.jpg"
   title: "A blonde bear sitting with a big Nikon camera in his lap."
 
-twitter: "https://twitter.com/jamboreebear"
-
 social:
   facebook: "https://www.facebook.com/jamboreebear/"
   twitter: "https://twitter.com/jamboreebear"

@@ -2,15 +2,13 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-{{- if .Params.Twitter }}
-<meta name="twitter:site" content="{{ .Params.Twitter }}">
+{{- if .Params.Social.Twitter }}
+<meta name="twitter:site" content="{{ .Params.Social.Twitter }}">
 {{- else if .Site.Params.Twitter }}
 <meta name="twitter:site" content="{{ .Site.Params.Twitter }}">
 {{- end }}
 {{- if .Params.Author.Twitter }}
 <meta name="twitter:creator" content="{{ .Params.Author.Twitter }}">
-{{- else if .Site.Params.Author.Twitter }}
-<meta name="twitter:creator" content="{{ .Site.Params.Author.Twitter }}">
 {{- end }}
 <meta name="twitter:card" content="summary">
 {{- with .Resources.ByType "image" }}
@@ -51,9 +49,7 @@
     <meta property="og:site_name" content="{{ . }}">
   {{- end }}
   {{- if .Params.Author.Facebook }}
-    <meta property="article:author" content="{{ .Params.Author.Facebook }}">
-  {{- else if .Site.Params.Author.Facebook }}
-    <meta property="article:author" content="{{ .Site.Params.Author.Facebook }}">
+  <meta property="article:author" content="{{ .Params.Author.Facebook }}">
   {{- end }}
   <meta property="article:section" content="{{ .CurrentSection.Title }}">
 {{- end }}

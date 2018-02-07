@@ -17,8 +17,6 @@ resources:
   params:
     anchor: "center"
 
-twitter: "https://twitter.com/HudsArchery"
-
 social:
   facebook: "https://www.facebook.com/huddersfield.archery"
   twitter: "https://twitter.com/HudsArchery"
