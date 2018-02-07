@@ -16,7 +16,7 @@ parent = "Mascots"
 
 [social]
 facebook = "jamboreebear"
-twitter = "https://twitter.com/jamboreebear"
+twitter = "jamboreebear"
 
 [[resources]]
 src = "media-bear.jpg"

@@ -15,7 +15,7 @@ parent = "Mascots"
 facebook = "s.c.paget"
 
 [social]
-twitter = "https://twitter.com/38theandn"
+twitter = "38theandn"
 
 [[resources]]
 src = "christmas-oops.jpg"

@@ -12,7 +12,7 @@ parent = "Mascots"
 [social]
 facebook = "{{ .TranslationBaseName }}"
 instagram = "https://instagram.com/{{ .TranslationBaseName }}"
-twitter = "https://twitter.com/{{ .TranslationBaseName }}"
+twitter = "{{ .TranslationBaseName }}"
 
 [[resources]]
 src = "avatar.jpg"

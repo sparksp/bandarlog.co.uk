@@ -3,12 +3,12 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 {{- if .Params.Social.Twitter }}
-<meta name="twitter:site" content="{{ .Params.Social.Twitter }}">
+<meta name="twitter:site" content="@{{ .Params.Social.Twitter }}">
 {{- else if .Site.Params.Twitter }}
-<meta name="twitter:site" content="{{ .Site.Params.Twitter }}">
+<meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
 {{- end }}
 {{- if .Params.Author.Twitter }}
-<meta name="twitter:creator" content="{{ .Params.Author.Twitter }}">
+<meta name="twitter:creator" content="@{{ .Params.Author.Twitter }}">
 {{- end }}
 <meta name="twitter:card" content="summary">
 {{- with .Resources.ByType "image" }}

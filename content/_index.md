@@ -5,7 +5,7 @@ description = "The 1st Bandar-log is a group of Scouting and Guiding mascots."
   name = "About"
 [author]
   facebook = "sparks.phill"
-  twitter = "https://twitter.com/PhillSparks"
+  twitter = "PhillSparks"
 +++
 # 1st Bandar-log
 

@@ -12,7 +12,7 @@ parent = "Mascots"
 
 [social]
 facebook = "huddersfield.archery"
-twitter = "https://twitter.com/HudsArchery"
+twitter = "HudsArchery"
 
 [[resources]]
 src = "udders-field.jpg"
