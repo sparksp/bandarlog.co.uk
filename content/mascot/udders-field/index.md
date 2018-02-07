@@ -1,6 +1,7 @@
 ---
 title: "Udders & Field"
 date: 2018-02-07T09:37:26Z
+slug: "udders-field"
 description: "Udders and Field are the Pennine Archers (in 'Uddersfield) Mascots!"
 
 menu:
