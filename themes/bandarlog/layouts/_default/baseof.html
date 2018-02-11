@@ -64,6 +64,8 @@
     </div>
     {{- end }}
 
+    {{ if ne .Site.GoogleAnalytics "off" }}
     {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
   </body>
 </html>
