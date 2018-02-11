@@ -4,7 +4,7 @@ title = "1st Bandar-log"
 theme = "bandarlog"
 enableRobotsTxt = true
 enableGitInfo = true
-googleAnalytics = "dev"
+googleAnalytics = "off"
 
 [permalinks]
   mascot = "/:slug/"
