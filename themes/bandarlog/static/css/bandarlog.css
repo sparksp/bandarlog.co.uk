@@ -13,10 +13,10 @@ body {
     top: 0;
 }
 .content {
-    flex: 1 1 auto;
     padding: 0 1em;
 }
 .aside {
+    flex: 1 1 auto;
     padding: 0 1em;
 }
 .footer {
