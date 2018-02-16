@@ -13,6 +13,9 @@ body {
     top: 0;
 }
 .content {
+    padding: 0 1em;
+}
+.aside {
     flex: 1 1 auto;
     padding: 0 1em;
 }
@@ -79,14 +82,22 @@ body {
     margin: .5em 0;
 }
 
-.mascot-page .content {
+.mascot-section .content, .mascot-section .aside,
+.mascot-page .content, .mascot-page .aside {
     background-color: green;
     color: white;
-    padding: 0;
 }
-.special-404 .content {
+.tags-taxonomy .content, .tags-taxonomy .aside,
+.special-home .aside {
+    background-color: navy;
+    color: white;
+}
+.special-404 .content, .special-404 .aside {
     background-color: darkred;
     color: white;
+}
+
+.mascot-page .content, .special-404 .content {
     padding: 0;
 }
 .mascot-page article, .special-404 article {
@@ -102,27 +113,18 @@ body {
     margin-top: -166px;
 }
 
-.mascot-section .content {
-    background-color: green;
-    color: white;
-}
-.tags-taxonomy .content {
-    background-color: navy;
-    color: white;
-}
-
 .mascot-list {
     text-align: center;
     margin: 1em 0;
 }
 .mascot-item {
     display: inline-block;
+    margin: .5em;
 }
 .mascot-link {
     background-color: rgba(255, 255, 255, .8);
     color: black;
     display: block;
-    margin: .5em;
     padding: .5em;
     text-decoration: none;
 }

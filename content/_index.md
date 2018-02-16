@@ -6,6 +6,12 @@ description = "The 1st Bandar-log is a group of Scouting and Guiding mascots."
 [author]
   facebook = "sparks.phill"
   twitter = "PhillSparks"
+[[resources]]
+  src = "map-search.jpg"
+  name = "more-mascots"
+  title = "Monkey Phill looking at a map"
+[resources.params]
+  anchor = "bottom"
 +++
 # 1st Bandar-log
 
