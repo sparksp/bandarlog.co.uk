@@ -101,7 +101,7 @@ body {
 .mascot-page .content, .special-404 .content {
     padding: 0;
 }
-.mascot-page article, .special-404 article {
+.mascot {
     background-color: white;
     color: black;
     margin: 150px auto 0;
@@ -109,7 +109,7 @@ body {
     padding: 1em;
     text-align: center;
 }
-.mascot-page img, .special-404 img {
+.mascot img {
     border: 8px solid white;
     margin-top: -166px;
 }

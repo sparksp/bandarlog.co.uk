@@ -5,21 +5,7 @@
 {{ end }}
 {{ define "main" }}
 {{- with .Site.GetPage "page" "404/index.md" }}
-<article class="single">
-  <header>
-    {{- range .Resources.ByType "image" | first 1 }}
-    {{ $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
-    <p><img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}"></p>
-    {{- end }}
-
-    <h1>{{ .Title }}</h1>
-  </header>
-
-  {{ .Content }}
-
-  {{- partial "tags" . }}
-  {{- partial "social-menu" . }}
-</article>
+{{ partial "mascot.html" . }}
 {{- end }}
 {{ end }}
 {{ define "footer" }}<!-- no footer -->{{ end }}
