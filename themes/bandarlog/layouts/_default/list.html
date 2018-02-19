@@ -2,6 +2,9 @@
 <article>
   <h2>{{ .Title }}</h2>
   {{ .Content }}
+</article>
+{{ end }}
+{{ define "aside" }}
   <div class="mascot-list">
   {{ range .Data.Pages }}
     {{ $page := . }}
@@ -17,5 +20,4 @@
   {{ end }}
   </div>
   </ul>
-</article>
 {{ end }}

@@ -82,12 +82,13 @@ body {
     margin: .5em 0;
 }
 
-.mascot-section .content, .mascot-section .aside,
-.mascot-page .content, .mascot-page .aside {
+.mascot-section .aside,
+.mascot-page .aside,
+.mascot-page .content {
     background-color: green;
     color: white;
 }
-.tags-taxonomy .content, .tags-taxonomy .aside,
+.tags-taxonomy .aside,
 .special-home .aside {
     background-color: navy;
     color: white;

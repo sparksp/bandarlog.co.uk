@@ -11,4 +11,4 @@ description = "The 1st Bandar-log is a group of Scouting and Guiding mascots."
 [resources.params]
   anchor = "bottom"
 +++
-The 1st Bandar-log are the small mascots of organisations, often small and cuddly creatures, coveted by young people and their leaders.
+1st Bandar-log are the small mascots of organisations, often small and cuddly creatures, coveted by young people and their leaders. [Read more](/about/)
