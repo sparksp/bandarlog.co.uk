@@ -12,4 +12,4 @@ clean :
 
 .PHONY : serve
 serve :
-	HUGO_GOOGLE_ANALYTICS=off hugo serve --buildDrafts --navigateToChanged --i18n-warnings --watch
+	HUGO_GOOGLE_ANALYTICS=off hugo serve --gc --buildDrafts --navigateToChanged --i18n-warnings --watch
