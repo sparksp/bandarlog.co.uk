@@ -9,13 +9,7 @@
   {{ range .Data.Pages }}
     {{ $page := . }}
     {{- range .Resources.ByType "image" | first 1 }}
-    {{ $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
-    <div class="mascot-item">
-      <a href="{{ $page.RelPermalink }}" class="mascot-link">
-        <img src="{{ $image.RelPermalink }}" title="{{ $page.Title }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}" class="pure-img">
-        <span class="mascot-name">{{ $page.Title }}</span>
-      </a>
-    </div>
+    {{ partial "mascot-item.html" (dict "page" $page "image" . )}}
     {{- end }}
   {{ end }}
   </div>

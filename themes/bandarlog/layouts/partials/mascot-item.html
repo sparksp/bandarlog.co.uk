@@ -1,0 +1,9 @@
+{{- if .image | and .page }}
+    {{- $image := .image.Fill (delimit (slice (.image.Params.anchor | default "") "300x300" "q75") " " | string) }}
+    <div class="mascot-item">
+        <a href="{{ .page.RelPermalink }}" class="mascot-link">
+            <img src="{{ $image.RelPermalink }}" title="{{ .page.Title }}" alt="{{ .image.Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}" class="pure-img">
+            <span class="mascot-name">{{ .name | default .page.Title }}</span>
+        </a>
+    </div>
+{{- end }}

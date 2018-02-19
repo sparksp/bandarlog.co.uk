@@ -9,29 +9,15 @@
 {{ end }}
 {{ define "aside" }}
     <div class="mascot-list">
-        {{- range .Data.Pages | first 3 }}
+        {{- range (where .Data.Pages "Section" "mascot") | first 3 }}
         {{- $page := . }}
         {{- range .Resources.ByType "image" | first 1 }}
-        {{- $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
-        <div class="mascot-item">
-            <a href="{{ $page.RelPermalink }}" class="mascot-link">
-                <img src="{{ $image.RelPermalink }}" title="{{ $page.Title }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}" class="pure-img">
-                <span class="mascot-name">{{ $page.Title }}</span>
-            </a>
-        </div>
+        {{ partial "mascot-item.html" (dict "page" $page "image" . )}}
         {{- end }}
         {{- end }}
 
         {{- $more := .Resources.GetMatch "more-mascots" }}
-        {{- if $more }}
-        {{- $image := $more.Fill (delimit (slice ($more.Params.anchor | default "") "300x300" "q75") " " | string) }}
         {{- $page := .Site.GetPage "section" "mascot" }}
-        <div class="mascot-item">
-            <a href="{{ $page.RelPermalink }}" class="mascot-link">
-                <img src="{{ $image.RelPermalink }}" title="More {{ $page.Title }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}" class="pure-img">
-                <span class="mascot-name">More {{ $page.Title }}</span>
-            </a>
-        </div>
-        {{- end }}
+        {{ partial "mascot-item.html" (dict "page" $page "image" $more "name" "More Mascots" )}}
     </div>
 {{ end }}
