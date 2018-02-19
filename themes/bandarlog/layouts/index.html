@@ -2,12 +2,12 @@
 {{- .Title -}}
 {{ end }}
 {{ define "main" }}
+    <h1>{{ .Title }}</h1>
     <article>
     {{ .Content }}
     </article>
 {{ end }}
 {{ define "aside" }}
-    <h2>Recent Mascots</h2>
     <div class="mascot-list">
         {{- range .Data.Pages | first 3 }}
         {{- $page := . }}
