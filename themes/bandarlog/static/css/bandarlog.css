@@ -138,3 +138,10 @@ body {
     margin-top: .5em;
     text-align: center;
 }
+
+@media screen and (min-width: 35.5em) {
+    .pure-img.pull-right {
+        float: right;
+        margin: 0 0 1em 1em;
+    }
+}

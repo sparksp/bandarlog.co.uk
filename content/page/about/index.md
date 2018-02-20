@@ -4,6 +4,10 @@ date = 2018-02-19T11:53:10Z
 url = "about"
 
 menu = "main"
+
+[[resources]]
+src = "group-photo.jpg"
+title = "A group photo of 4 mascots: a skeletal dog, a leopard, a monkey and a kangaroo."
 +++
 The Bandar-Log are the "Monkey People" of the Jungle Book.  A group of monkeys that do not follow the Law of the Jungle, have no leader, and are considered outcasts of the Jungle.  Their slogan is *"We are great. We are free. We are wonderful. We are the most wonderful people in all the jungle! We all say so, and so it must be true."*
 
