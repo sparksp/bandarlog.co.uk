@@ -1,13 +1,13 @@
 {{ define "title" }}
 {{- .Title -}}
 {{ end }}
-{{ define "main" }}
+{{ define "header" }}
     <h1>{{ .Title }}</h1>
     <article>
     {{ .Content }}
     </article>
 {{ end }}
-{{ define "aside" }}
+{{ define "content" }}
     <div class="mascot-list">
         {{- range (where .Data.Pages "Section" "mascot") | first 3 }}
         {{- $page := . }}

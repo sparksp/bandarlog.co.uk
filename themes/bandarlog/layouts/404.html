@@ -3,7 +3,7 @@
 {{ .Title }} - {{ .Site.Title }}
 {{- end }}
 {{ end }}
-{{ define "main" }}
+{{ define "content" }}
 {{- with .Site.GetPage "page" "404/index.md" }}
 {{ partial "mascot.html" . }}
 {{- end }}
