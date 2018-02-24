@@ -1,22 +1,6 @@
 {{ define "content" }}
 <article>
   <h1>{{ .Title }}</h1>
-  <p class="post-meta">
-    <i class="fa fa-calendar" title="{{ i18n "Posted on" }}"></i>
-    <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
-  {{- with .Params.categories }}
-    <i class="fa fa-folder-open" title="{{ . | len | i18n "Categories" }}"></i>
-    {{- range . }}
-    <a href="{{ "categories/" | relURL }}{{ . | urlize }}" class="category category-{{ . | urlize }}">{{ . }}</a>
-    {{- end }}
-  {{- end }}
-  {{- with .Params.tags }}
-    <i class="fa fa-tags" title="{{ . | len | i18n "Tags" }}"></i>
-    {{- range . }}
-    <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag tag-{{ . | urlize }}">{{ . }}</a>
-    {{- end }}
-  {{- end }}
-  </p>
 
   {{- with .Resources.ByType "image" }}
   <aside>
