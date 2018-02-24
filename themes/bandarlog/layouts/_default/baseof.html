@@ -59,9 +59,10 @@
     {{- block "footer" . }}
     <div class="footer">
       <p>
-        Design by <a href="{{ .Site.Params.Author.Homepage | safeURL }}">{{ .Site.Params.Author.Name }}</a>.
-        Built with <a href="https://gohugo.io">Hugo</a>.
-        Hosted on <a href="https://www.netlify.com/">Netlify</a>.
+        <i class="fas fa-paint-brush" title="Design by"></i> <a href="{{ .Site.Params.Author.Homepage | safeURL }}">{{ .Site.Params.Author.Name }}</a>.
+        <i class="fas fa-code" title="Built with"></i> <a href="https://gohugo.io">Hugo</a>.
+        <i class="fas fa-server" title="Hosted on"></i> <a href="https://www.netlify.com/">Netlify</a>.
+        <i class="fas fa-code-branch" title="Fork on"></i> <a href="https://github.com/sparksp/bandarlog.co.uk/">GitHub</a>.
       </p>
     </div>
     {{- end }}
