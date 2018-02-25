@@ -23,7 +23,7 @@
     {{- end }}
   </head>
   <body class="{{ .Section | default "special" }}-{{ .Kind }}">
-    <div class="header" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+    <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
       <nav class="pure-menu pure-menu-horizontal">
         <ul class="pure-menu-list action-list">
           <li class="pure-menu-item menu-toggle">
@@ -50,19 +50,22 @@
       </nav>
     </div>
 
-    <div class="content">
-      {{- block "main" . }}{{ end }}
-    </div>
-    <div class="aside">
-      {{- block "aside" . }}{{ end }}
-    </div>
+    <div class="article"><div class="header">
+      {{- block "header" . }}{{ end -}}
+    </div><div class="content">
+      {{- block "content" . }}{{ end -}}
+    </div></div>
 
     {{- block "footer" . }}
     <div class="footer">
       <p>
-        Design by <a href="{{ .Site.Params.Author.Homepage | safeURL }}">{{ .Site.Params.Author.Name }}</a>.
-        Built with <a href="https://gohugo.io">Hugo</a>.
-        Hosted on <a href="https://www.netlify.com/">Netlify</a>.
+        {{- if .IsPage }}
+        <i class="fa fa-calendar" title="Posted on"></i> <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>.
+        {{- end }}
+        <i class="fas fa-paint-brush" title="Design by"></i> <a href="{{ .Site.Params.Author.Homepage | safeURL }}">{{ .Site.Params.Author.Name }}</a>.
+        <i class="fas fa-code" title="Built with"></i> <a href="https://gohugo.io">Hugo</a>.
+        <i class="fas fa-server" title="Hosted on"></i> <a href="https://www.netlify.com/">Netlify</a>.
+        <i class="fas fa-code-branch" title="Fork on"></i> <a href="https://github.com/sparksp/bandarlog.co.uk/">GitHub</a>.
       </p>
     </div>
     {{- end }}

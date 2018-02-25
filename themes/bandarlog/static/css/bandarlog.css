@@ -6,17 +6,16 @@ body {
     flex-flow: column;
     min-height: 100%;
 }
-.header {
+.topmenu {
     flex: 0 1 auto;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
-.content {
-    padding: 0 1em;
-}
-.aside {
+.article {
     flex: 1 1 auto;
+}
+.header, .content {
     padding: 0 1em;
 }
 .footer {
@@ -24,19 +23,19 @@ body {
     padding: 0 1em;
 }
 
-.header {
+.topmenu {
     background-color: rgba(255, 255, 255, .9);
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     color: black;
 }
-.header .pure-menu-heading {
+.topmenu .pure-menu-heading {
     font-size: 1em;
     font-weight: bold;
     margin: 0;
     padding: .5em 1em .5em 0;
     text-transform: none;
 }
-.header a {
+.topmenu a {
     text-decoration: none;
     color: black;
 }
@@ -82,25 +81,34 @@ body {
     margin: .5em 0;
 }
 
-.mascot-section .content, .mascot-section .aside,
-.mascot-page .content, .mascot-page .aside {
+.mascot-section .article,
+.mascot-page .article {
     background-color: green;
     color: white;
 }
-.tags-taxonomy .content, .tags-taxonomy .aside,
-.special-home .aside {
+.tags-taxonomy .article,
+.special-home .article {
     background-color: navy;
     color: white;
 }
-.special-404 .content, .special-404 .aside {
+.special-404 .article {
     background-color: darkred;
     color: white;
+}
+
+.mascot-section .header,
+.tags-taxonomy .header,
+.special-home .header {
+    background-color: white;
+    color: black;
+    padding: 1px 1em;
 }
 
 .mascot-page .content, .special-404 .content {
     padding: 0;
 }
-.mascot-page article, .special-404 article {
+
+.mascot {
     background-color: white;
     color: black;
     margin: 150px auto 0;
@@ -108,7 +116,7 @@ body {
     padding: 1em;
     text-align: center;
 }
-.mascot-page img, .special-404 img {
+.mascot img {
     border: 8px solid white;
     margin-top: -166px;
 }
@@ -136,4 +144,11 @@ body {
     display: block;
     margin-top: .5em;
     text-align: center;
+}
+
+@media screen and (min-width: 35.5em) {
+    .pure-img.pull-right {
+        float: right;
+        margin: 0 0 1em 1em;
+    }
 }

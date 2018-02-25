@@ -1,0 +1,15 @@
+<article class="mascot">
+  <header>
+    {{- range .Resources.ByType "image" | first 1 }}
+    {{ $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
+    <p><img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" height="{{ $image.Height }}" width="{{ $image.Width }}"></p>
+    {{- end }}
+
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{ .Content }}
+
+  {{- partial "tags" . }}
+  {{- partial "social-menu" . }}
+</article>

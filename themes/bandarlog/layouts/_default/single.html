@@ -1,22 +1,16 @@
-{{ define "main" }}
+{{ define "content" }}
 <article>
-  <h2>{{ .Title }}</h2>
-  <p class="post-meta">
-    <i class="fa fa-calendar" title="{{ i18n "Posted on" }}"></i>
-    <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
-  {{- with .Params.categories }}
-    <i class="fa fa-folder-open" title="{{ . | len | i18n "Categories" }}"></i>
-    {{- range . }}
-    <a href="{{ "categories/" | relURL }}{{ . | urlize }}" class="category category-{{ . | urlize }}">{{ . }}</a>
-    {{- end }}
+  <h1>{{ .Title }}</h1>
+
+  {{- with .Resources.ByType "image" }}
+  <aside>
+  {{- range . }}
+  {{ $image := .Fill "300x300 center" }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $image.Title }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="pure-img pull-right">
   {{- end }}
-  {{- with .Params.tags }}
-    <i class="fa fa-tags" title="{{ . | len | i18n "Tags" }}"></i>
-    {{- range . }}
-    <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag tag-{{ . | urlize }}">{{ . }}</a>
-    {{- end }}
+  </aside>
   {{- end }}
-  </p>
+
   {{ .Content }}
 </article>
 {{ end }}
