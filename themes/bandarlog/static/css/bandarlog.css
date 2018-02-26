@@ -35,12 +35,22 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     color: black;
 }
+.topmenu .container {
+    position: relative;
+}
+.topmenu .pull-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .topmenu .pure-menu-heading {
     font-size: 1em;
     font-weight: bold;
     margin: 0;
-    padding: .5em 1em .5em 0;
+    padding: .5em 0;
+    text-align: center;
     text-transform: none;
+    width: 100%;
 }
 .topmenu a {
     text-decoration: none;
