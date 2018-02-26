@@ -23,18 +23,21 @@
     {{- end }}
   </head>
   <body class="{{ .Section | default "special" }}-{{ .Kind }}">
-    <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+    <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu"><div class="container">
       {{ partial "main-menu.html" . }}
-    </div>
-
-    <div class="article"><div class="header">
-      {{- block "header" . }}{{ end -}}
-    </div><div class="content">
-      {{- block "content" . }}{{ end -}}
     </div></div>
 
+    <div class="article">
+      <div class="header"><div class="container">
+      {{- block "header" . }}{{ end -}}
+      </div></div>
+      <div class="content"><div class="container">
+      {{- block "content" . }}{{ end -}}
+      </div></div>
+    </div>
+
     {{- block "footer" . }}
-    <div class="footer">
+    <div class="footer"><div class="container">
       <p>
         {{- if .IsPage }}
         <i class="fa fa-calendar" title="Posted on"></i> <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>.
@@ -44,7 +47,7 @@
         <i class="fas fa-server" title="Hosted on"></i> <a href="https://www.netlify.com/">Netlify</a>.
         <i class="fas fa-code-branch" title="Fork on"></i> <a href="https://github.com/sparksp/bandarlog.co.uk/">GitHub</a>.
       </p>
-    </div>
+    </div></div>
     {{- end }}
 
     {{ if ne .Site.GoogleAnalytics "off" }}
