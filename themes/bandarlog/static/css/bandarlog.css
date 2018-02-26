@@ -126,7 +126,7 @@ body {
     padding: 1px 1em;
 }
 
-.special-home .content, .mascot-section .content,
+.special-home .content, .mascot-section .content, .tags-taxonomy .content,
 .mascot-page .content, .special-404 .content {
     padding: 0;
 }
