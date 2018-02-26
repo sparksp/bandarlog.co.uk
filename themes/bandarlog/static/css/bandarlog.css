@@ -3,23 +3,23 @@ html {
 }
 body {
     display: flex;
-    flex-flow: column;
+    flex: auto;
+    flex-direction: column;
     min-height: 100%;
 }
 .topmenu {
-    flex: 0 1 auto;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 .article {
-    flex: 1 1 auto;
+    flex: auto;
 }
 .header, .content {
     padding: 0 1em;
 }
 .footer {
-    flex: 0 1 2em;
+    flex-basis: 2em;
     padding: 0 1em;
 }
 
@@ -104,6 +104,7 @@ body {
     padding: 1px 1em;
 }
 
+.special-home .content, .mascot-section .content,
 .mascot-page .content, .special-404 .content {
     padding: 0;
 }
@@ -122,12 +123,14 @@ body {
 }
 
 .mascot-list {
-    text-align: center;
-    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: .5em;
 }
 .mascot-item {
-    display: inline-block;
-    margin: .5em;
+    break-inside: avoid;
+    padding: .5em;
 }
 .mascot-link {
     background-color: rgba(255, 255, 255, .8);
