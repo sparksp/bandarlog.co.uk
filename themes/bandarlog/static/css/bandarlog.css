@@ -32,7 +32,7 @@ body {
 
 .topmenu {
     background-color: rgba(255, 255, 255, .9);
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
     color: black;
 }
 .topmenu .container {
@@ -70,8 +70,7 @@ body {
     position: absolute;
     width: 100%;
     background-color: rgba(255, 255, 255, .9);
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-top: none;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .3);
 }
 :target .collapsible-menu, [aria-expanded="true"] .collapsible-menu {
     font-size: 1em;
