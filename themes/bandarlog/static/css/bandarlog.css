@@ -65,31 +65,15 @@ body {
     background-color: rgba(100,  100, 100, .1);
 }
 
-.collapsible-menu {
-    font-size: 0;
-    position: absolute;
-    width: 100%;
-    background-color: rgba(255, 255, 255, .9);
-    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .3);
-}
-:target .collapsible-menu, [aria-expanded="true"] .collapsible-menu {
-    font-size: 1em;
-}
-#main-menu ul {
-    transition: font-size .3s ease-out;
-}
-
-.action-list .pure-menu-link {
+#main-menu-link {
     padding: .5em;
 }
-.action-list .menu-close {
-    display: none;
+#main-menu-link:after {
+    font-size: 0;
 }
-:target .action-list .menu-toggle {
-    display: none;
-}
-:target .action-list .menu-close {
-    display: inline-block;
+.action-list .pure-menu-children {
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .3);
 }
 
 .footer {
