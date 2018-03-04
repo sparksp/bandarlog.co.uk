@@ -9,6 +9,7 @@
 
         var PREFIX = 'pure-',
             ACTIVE_CLASS_NAME = PREFIX + 'menu-active',
+            ALLOW_HOVER_CLASS_NAME = PREFIX + 'menu-allow-hover',
             ARIA_ROLE = 'role',
             ARIA_HIDDEN = 'aria-hidden',
             MENU_OPEN = 0,
@@ -82,6 +83,9 @@
                 e.preventDefault();
                 ddm.toggle();
             });
+
+            // Disable hover mode
+            this._dropdownParent.classList.remove(ALLOW_HOVER_CLASS_NAME);
 
             // Keyboard navigation
             document.addEventListener('keydown', function (e) {
