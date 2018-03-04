@@ -1,11 +1,11 @@
 <nav class="pure-menu pure-menu-horizontal">
   <ul class="pure-menu-list action-list pull-left">
-    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-      <a class="pure-menu-link" id="main-menu-link" aria-label="Open main menu">
+    <li class="pure-menu-item pure-menu-has-children">
+      <a class="pure-menu-link" id="main-menu-toggle" role="button" aria-controls="main-menu" aria-label="Open main menu">
         <span class="sr-only">Open main menu</span>
         <span class="fas fa-bars fa-fw" aria-hidden="true"></span>
       </a>
-      <ul class="pure-menu-children">
+      <ul class="pure-menu-children" id="main-menu">
         {{- range .Site.Menus.main }}
         <li class="pure-menu-item{{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} pure-menu-selected{{end}}"><a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a></li>
         {{- end }}

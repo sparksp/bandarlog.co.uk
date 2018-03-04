@@ -65,10 +65,10 @@ body {
     background-color: rgba(100,  100, 100, .1);
 }
 
-#main-menu-link {
+#main-menu-toggle {
     padding: .5em;
 }
-#main-menu-link:after {
+#main-menu-toggle:after {
     font-size: 0;
 }
 .action-list .pure-menu-children {
