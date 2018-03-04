@@ -3,24 +3,31 @@ html {
 }
 body {
     display: flex;
-    flex-flow: column;
+    flex: auto;
+    flex-direction: column;
     min-height: 100%;
 }
 .topmenu {
-    flex: 0 1 auto;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 .article {
-    flex: 1 1 auto;
+    flex: auto;
 }
 .header, .content {
     padding: 0 1em;
 }
 .footer {
-    flex: 0 1 2em;
+    flex-basis: 2em;
     padding: 0 1em;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 64em;
 }
 
 .topmenu {
@@ -28,12 +35,22 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .3);
     color: black;
 }
+.topmenu .container {
+    position: relative;
+}
+.topmenu .pull-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .topmenu .pure-menu-heading {
     font-size: 1em;
     font-weight: bold;
     margin: 0;
-    padding: .5em 1em .5em 0;
+    padding: .5em 0;
+    text-align: center;
     text-transform: none;
+    width: 100%;
 }
 .topmenu a {
     text-decoration: none;
@@ -50,6 +67,11 @@ body {
 
 .collapsible-menu {
     font-size: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .9);
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-top: none;
 }
 :target .collapsible-menu, [aria-expanded="true"] .collapsible-menu {
     font-size: 1em;
@@ -104,6 +126,7 @@ body {
     padding: 1px 1em;
 }
 
+.special-home .content, .mascot-section .content, .tags-taxonomy .content,
 .mascot-page .content, .special-404 .content {
     padding: 0;
 }
@@ -122,12 +145,14 @@ body {
 }
 
 .mascot-list {
-    text-align: center;
-    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: .5em;
 }
 .mascot-item {
-    display: inline-block;
-    margin: .5em;
+    break-inside: avoid;
+    padding: .5em;
 }
 .mascot-link {
     background-color: rgba(255, 255, 255, .8);

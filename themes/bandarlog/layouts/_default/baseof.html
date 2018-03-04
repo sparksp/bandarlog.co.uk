@@ -23,41 +23,21 @@
     {{- end }}
   </head>
   <body class="{{ .Section | default "special" }}-{{ .Kind }}">
-    <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu">
-      <nav class="pure-menu pure-menu-horizontal">
-        <ul class="pure-menu-list action-list">
-          <li class="pure-menu-item menu-toggle">
-            <a href="#main-menu" class="pure-menu-link" role="button" id="main-menu-toggle" aria-controls="main-menu" aria-label="Open main menu">
-              <span class="sr-only">Open main menu</span>
-              <span class="fas fa-bars fa-fw" aria-hidden="true"></span>
-            </a>
-          </li>
-          <li class="pure-menu-item menu-close">
-            <a href="#" class="pure-menu-link" role="button" id="main-menu-close" aria-controls="main-menu" aria-label="Close main menu">
-              <span class="sr-only">Close main menu</span>
-              <span class="fas fa-times fa-fw" aria-hidden="true"></span>
-            </a>
-          </li>
-        </ul>
-        <p class="pure-menu-heading"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
-      </nav>
-      <nav class="pure-menu collapsible-menu">
-        <ul class="pure-menu-list">
-          {{- range .Site.Menus.main }}
-          <li class="pure-menu-item{{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} pure-menu-selected{{end}}"><a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a></li>
-          {{- end }}
-        </ul>
-      </nav>
-    </div>
-
-    <div class="article"><div class="header">
-      {{- block "header" . }}{{ end -}}
-    </div><div class="content">
-      {{- block "content" . }}{{ end -}}
+    <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu"><div class="container">
+      {{ partial "main-menu.html" . }}
     </div></div>
 
+    <div class="article">
+      <div class="header"><div class="container">
+      {{- block "header" . }}{{ end -}}
+      </div></div>
+      <div class="content"><div class="container">
+      {{- block "content" . }}{{ end -}}
+      </div></div>
+    </div>
+
     {{- block "footer" . }}
-    <div class="footer">
+    <div class="footer"><div class="container">
       <p>
         {{- if .IsPage }}
         <i class="fa fa-calendar" title="Posted on"></i> <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>.
@@ -67,7 +47,7 @@
         <i class="fas fa-server" title="Hosted on"></i> <a href="https://www.netlify.com/">Netlify</a>.
         <i class="fas fa-code-branch" title="Fork on"></i> <a href="https://github.com/sparksp/bandarlog.co.uk/">GitHub</a>.
       </p>
-    </div>
+    </div></div>
     {{- end }}
 
     {{ if ne .Site.GoogleAnalytics "off" }}
