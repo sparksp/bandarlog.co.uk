@@ -3,6 +3,21 @@
   <h2>{{ .Title }}</h2>
   {{ .Content }}
 </article>
+<nav class="pure-menu pure-menu-horizontal"><ul class="pure-menu-list">
+  <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+    <a href="#filter" class="pure-menu-link"><i class="fas fa-sliders-h"></i></a>
+    <ul class="pure-menu-children">
+    {{ $currentPage := . }}
+    {{- with ($.Site.GetPage "section" "mascot")}}
+    <li class="pure-menu-item"><a href="{{ .RelPermalink }}" class="pure-menu-link{{ if eq $currentPage . }} pure-menu-selected{{ end }}">{{ .Title }}</a></li>
+    {{- end }}
+      <li class="pure-menu-item"><hr></li>
+    {{- range ($.Site.GetPage "taxonomyTerm" "tags").Pages.ByTitle }}
+      <li class="pure-menu-item"><a href="{{ .RelPermalink }}" class="pure-menu-link{{ if eq $currentPage . }} pure-menu-selected{{ end }}">{{ .Title }}</a></li>
+    {{- end }}
+    </ul>
+  </li>
+</ul></nav>
 {{ end }}
 {{ define "content" }}
   <div class="mascot-list">
