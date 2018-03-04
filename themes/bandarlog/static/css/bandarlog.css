@@ -67,6 +67,7 @@ body {
 
 #main-menu-toggle {
     padding: .5em;
+    cursor: pointer;
 }
 #main-menu-toggle:after {
     font-size: 0;
