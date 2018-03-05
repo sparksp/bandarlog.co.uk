@@ -34,6 +34,7 @@ body {
     background-color: rgba(255, 255, 255, .9);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .3);
     color: black;
+    z-index: 2;
 }
 .topmenu .container {
     position: relative;
@@ -42,6 +43,15 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+}
+.topmenu .pull-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pure-menu-horizontal .pull-right .pure-menu-children {
+    left: auto;
+    right: 0;
 }
 .topmenu .pure-menu-heading {
     font-size: 1em;
@@ -52,29 +62,26 @@ body {
     text-transform: none;
     width: 100%;
 }
-.topmenu a {
+.pure-menu-heading a {
     text-decoration: none;
     color: black;
 }
 .pure-menu-active > .pure-menu-link,
 .pure-menu-link:hover,
 .pure-menu-link:focus {
-    background-color: rgba(100,  100, 100, .2);
-}
-.pure-menu-selected {
-    background-color: rgba(100,  100, 100, .1);
+    color: black;
 }
 
-#main-menu-toggle {
+.topmenu .pure-menu-link {
     padding: .5em;
     cursor: pointer;
 }
-#main-menu-toggle:after {
-    font-size: 0;
-}
-.action-list .pure-menu-children {
-    background-color: rgba(255, 255, 255, .9);
+.pure-menu-children {
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+.pure-menu-children .pure-menu-link {
+    padding: .5em 1em;
 }
 
 .footer {
@@ -117,6 +124,7 @@ body {
 
 .mascot {
     background-color: white;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
     color: black;
     margin: 150px auto 0;
     max-width: 600px;
@@ -125,6 +133,7 @@ body {
 }
 .mascot img {
     border: 8px solid white;
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
     margin-top: -166px;
 }
 
@@ -140,6 +149,7 @@ body {
 }
 .mascot-link {
     background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
     color: black;
     display: block;
     padding: .5em;
@@ -147,6 +157,7 @@ body {
 }
 .mascot-link:hover, .mascot-link:focus, .mascot-link:active {
     background-color: white;
+    box-shadow: 0 0 2px 4px rgba(0, 0, 0, .3);
     color: black;
 }
 .mascot-name {

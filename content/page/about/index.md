@@ -1,6 +1,7 @@
 +++
 title = "Why Bandar-log?"
 date = 2018-02-19T11:53:10Z
+icon = "fas fa-info-circle"
 url = "about"
 
 menu = "main"

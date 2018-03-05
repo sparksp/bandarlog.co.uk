@@ -7,9 +7,6 @@ tags = [
   "Archery",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [social]
 facebook = "huddersfield.archery"
 twitter = "HudsArchery"

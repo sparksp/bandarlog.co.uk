@@ -6,6 +6,28 @@ enableRobotsTxt = true
 enableGitInfo = true
 googleAnalytics = "off"
 
+[[menu.footer]]
+  identifier = "design-by"
+  name = "Phill Sparks"
+  pre = "<i class=\"fas fa-paint-brush\" title=\"Design by\"></i>"
+  url = "https://phills.me.uk/"
+  weight = -1
+[[menu.footer]]
+  identifier = "built-with"
+  name = "Hugo"
+  pre = "<i class=\"fas fa-code\" title=\"Built with\"></i>"
+  url = "https://gohugo.io"
+[[menu.footer]]
+  identifier = "hosted-on"
+  name = "Netlify"
+  pre = "<i class=\"fas fa-server\" title=\"Hosted on\"></i>"
+  url = "https://www.netlify.com"
+[[menu.footer]]
+  identifier = "fork-on"
+  name = "GitHub"
+  pre = "<i class=\"fas fa-code-branch\" title=\"Fork on\"></i>"
+  url = "https://github.com/sparksp/bandarlog.co.uk/"
+
 [permalinks]
   mascot = "/:slug/"
 

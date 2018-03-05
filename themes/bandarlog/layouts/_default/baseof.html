@@ -43,10 +43,9 @@
         {{- if .IsPage }}
         <i class="fa fa-calendar" title="Posted on"></i> <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>.
         {{- end }}
-        <i class="fas fa-paint-brush" title="Design by"></i> <a href="{{ .Site.Params.Author.Homepage | safeURL }}">{{ .Site.Params.Author.Name }}</a>.
-        <i class="fas fa-code" title="Built with"></i> <a href="https://gohugo.io">Hugo</a>.
-        <i class="fas fa-server" title="Hosted on"></i> <a href="https://www.netlify.com/">Netlify</a>.
-        <i class="fas fa-code-branch" title="Fork on"></i> <a href="https://github.com/sparksp/bandarlog.co.uk/">GitHub</a>.
+        {{- range .Site.Menus.footer }}
+        {{ .Pre }} <a href="{{ .URL }}">{{ .Name }}</a>.
+        {{- end }}
       </p>
     </div></div>
     {{- end }}

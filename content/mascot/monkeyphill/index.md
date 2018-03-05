@@ -12,9 +12,6 @@ tags = [
   "Geocaching",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [author]
 facebook = "sparks.phill"
 twitter = "PhillSparks"

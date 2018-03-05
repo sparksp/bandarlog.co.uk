@@ -10,9 +10,6 @@ tags = [
   "Badges",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [author]
 facebook = "s.c.paget"
 
