@@ -24,7 +24,7 @@
         <li class="pure-menu-separator"></li>
       {{- end }}
       {{- range ($.Site.GetPage "taxonomyTerm" "tags").Pages.ByTitle }}
-        <li class="pure-menu-item{{ if eq $currentPage . }} pure-menu-selected{{ end }}"><a href="{{ .RelPermalink }}" class="pure-menu-link">{{ .Title }}</a></li>
+        <li class="pure-menu-item{{ if or (eq $currentPage .) (in $currentPage.Params.tags .Title) }} pure-menu-selected{{ end }}"><a href="{{ .RelPermalink }}" class="pure-menu-link">{{ .Title }}</a></li>
       {{- end }}
       </ul>
     </li>
