@@ -12,6 +12,7 @@
             ALLOW_HOVER_CLASS_NAME = PREFIX + 'menu-allow-hover',
             ARIA_ROLE = 'role',
             ARIA_HIDDEN = 'aria-hidden',
+            ELEMENT_NODE = 1, // Node.ELEMENT_NODE
             MENU_OPEN = 0,
             MENU_CLOSED = 1,
             MENU_PARENT_CLASS_NAME = 'pure-menu-has-children',
@@ -54,6 +55,83 @@
                 e.preventDefault();
             };
 
+            this.findFirstSibling = function () {
+                return this._menu.querySelector('.pure-menu-item');
+            };
+            this.findLastSibling = function () {
+                return this._menu.querySelector('.pure-menu-item:last-child');
+            };
+
+            this.selectPreviousLink = function (currentLink) {
+                var previousSibling,
+                    previousLink;
+
+                var findPreviousSibling = function (currentSibling) {
+                    if (!currentSibling) return;
+
+                    var previousSibling = currentSibling.previousSibling;
+                    // if the previousSibling is a text node (not an element), go to the previous one
+                    if (previousSibling && previousSibling.nodeType !== ELEMENT_NODE) {
+                        return findPreviousSibling(previousSibling);
+                    }
+                    return previousSibling;
+                };
+                var findPreviousLink = function (li) {
+                    if (!li) return;
+
+                    var previousLink = li.querySelector(MENU_LINK_SELECTOR);
+                    if (previousLink) {
+                        return previousLink;
+                    }
+                    return findPreviousLink(findPreviousSibling(li));
+                };
+                
+                if (!currentLink) {
+                    previousSibling = this.findLastSibling();
+                }
+                else {
+                    previousSibling = findPreviousSibling(currentLink.parentNode) || this.findLastSibling();
+                }
+
+                previousLink = findPreviousLink(previousSibling);
+                previousLink && previousLink.focus();
+            };
+
+            this.selectNextLink = function (currentLink) {
+                var nextSibling,
+                    nextLink;
+
+                var findNextSibling = function (currentSibling) {
+                    if (!currentSibling) return;
+
+                    var nextSibling = currentSibling.nextSibling;
+                    // if the nextSibling is a text node (not an element), go to the next one
+                    if (nextSibling && nextSibling.nodeType !== ELEMENT_NODE) {
+                        return findNextSibling(nextSibling);
+                    }
+                    return nextSibling;
+                };
+                var findNextLink = function (li) {
+                    if (!li) return;
+
+                    var nextLink = li.querySelector(MENU_LINK_SELECTOR);
+                    if (!nextLink) {
+                        return findNextLink(findNextSibling(li));
+                    }
+                    return nextLink;
+                };
+                
+                if (!currentLink) {
+                    nextSibling = this.findFirstSibling();
+                }
+                else {
+                    nextSibling = findNextSibling(currentLink.parentNode) || this.findFirstSibling();
+                }
+
+                nextLink = findNextLink(nextSibling);
+                nextLink && nextLink.focus();
+            };
+        
             this._dropdownParent = dropdownParent;
             this._link = this._dropdownParent.querySelector(MENU_LINK_SELECTOR);
             this._menu = this._dropdownParent.querySelector(MENU_SELECTOR);
@@ -117,39 +195,13 @@
                 else if (ARROW_KEYS_ENABLED && e.keyCode === 40) {
                     /* Down arrow */
                     ddm.halt(e);
-                    // get the nextSibling (an LI) of the current link's LI
-                    nextSibling = (currentLink) ? currentLink.parentNode.nextSibling : null;
-                    // if the nextSibling is a text node (not an element), go to the next one
-                    while (nextSibling && nextSibling.nodeType !== 1) {
-                        nextSibling = nextSibling.nextSibling;
-                    }
-                    nextLink = (nextSibling) ? nextSibling.querySelector('.pure-menu-link') : null;
-                    // if there is no currently focused link, focus the first one
-                    if (!currentLink) {
-                        ddm._menu.querySelector('.pure-menu-link').focus();
-                    }
-                    else if (nextLink) {
-                        nextLink.focus();
-                    }
+                    ddm.selectNextLink(currentLink);
                 }
                 // Go to the previous link on up arrow
                 else if (ARROW_KEYS_ENABLED && e.keyCode === 38) {
                     /* Up arrow */
                     ddm.halt(e);
-                    // get the currently focused link
-                    previousSibling = (currentLink) ? currentLink.parentNode.previousSibling : null;
-                    while (previousSibling && previousSibling.nodeType !== 1) {
-                        previousSibling = previousSibling.previousSibling;
-                    }
-                    previousLink = (previousSibling) ? previousSibling.querySelector('.pure-menu-link') : null;
-                    // if there is no currently focused link, focus the last link
-                    if (!currentLink) {
-                        ddm._menu.querySelector('.pure-menu-item:last-child .pure-menu-link').focus();
-                    }
-                    // else if there is a previous item, go to the previous item
-                    else if (previousLink) {
-                        previousLink.focus();
-                    }
+                    ddm.selectPreviousLink(currentLink);
                 }
             });
 
