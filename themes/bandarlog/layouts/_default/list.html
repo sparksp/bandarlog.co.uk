@@ -9,9 +9,9 @@
     <ul class="pure-menu-children">
     {{ $currentPage := . }}
     {{- with ($.Site.GetPage "section" "mascot")}}
-    <li class="pure-menu-item"><a href="{{ .RelPermalink }}" class="pure-menu-link{{ if eq $currentPage . }} pure-menu-selected{{ end }}">{{ .Title }}</a></li>
+      <li class="pure-menu-item"><a href="{{ .RelPermalink }}" class="pure-menu-link{{ if eq $currentPage . }} pure-menu-selected{{ end }}">{{ .Title }}</a></li>
     {{- end }}
-      <li class="pure-menu-item"><hr></li>
+      <li class="pure-menu-separator"></li>
     {{- range ($.Site.GetPage "taxonomyTerm" "tags").Pages.ByTitle }}
       <li class="pure-menu-item"><a href="{{ .RelPermalink }}" class="pure-menu-link{{ if eq $currentPage . }} pure-menu-selected{{ end }}">{{ .Title }}</a></li>
     {{- end }}
