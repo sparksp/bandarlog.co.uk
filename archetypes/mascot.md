@@ -7,9 +7,6 @@ tags = [
   "Scouting",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 # Configure links to this mascot's author:
 # [author]
 # facebook = "author.name"
