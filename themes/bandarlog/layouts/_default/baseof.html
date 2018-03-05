@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" integrity="sha384-b92sF+wDNTHrfEtRaYo+EpcA8FUyHOSXrdxKc9XB9kaaX1rSQAgMevW6cYeE5Bdv" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ "/css/bandarlog.css" | relURL }}" media="screen">
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script defer src="{{ "/js/menu.js" | relURL }}"></script>
     <link rel="self" href="{{ .Permalink }}" title="{{ .Title }}">
     {{- range .AlternativeOutputFormats }}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
