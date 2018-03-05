@@ -74,6 +74,8 @@ body {
 }
 .action-list .pure-menu-children {
     background-color: rgba(255, 255, 255, .9);
+}
+.pure-menu-children {
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .3);
 }
 
