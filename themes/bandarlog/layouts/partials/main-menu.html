@@ -1,14 +1,31 @@
+{{- $currentPage := . -}}
 <nav class="pure-menu pure-menu-horizontal">
-  <ul class="pure-menu-list action-list pull-left">
+  <ul class="pure-menu-list pull-left">
+    {{- range .Site.Menus.main }}
+    <li class="pure-menu-item{{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} pure-menu-selected{{end}}">
+      <a class="pure-menu-link" href="{{ .URL }}">
+        <i class="{{ .Page.Params.icon | default "fas fa-file" }} fa-fw" title="{{ .Name }}"></i>
+      </a>    
+    </li>
+    {{- end }}
+  </ul>
+  <ul class="pure-menu-list pull-right">
     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-      <a href="#" class="pure-menu-link" id="main-menu-toggle" role="button" aria-controls="main-menu" aria-label="Open main menu">
-        <span class="sr-only">Open main menu</span>
-        <span class="fas fa-bars fa-fw" aria-hidden="true"></span>
+      <a href="#filter" class="pure-menu-link">
+        <span class="fas fa-sliders-h" title="Filter"></span>
       </a>
-      <ul class="pure-menu-children" id="main-menu">
-        {{- range .Site.Menus.main }}
-        <li class="pure-menu-item{{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} pure-menu-selected{{end}}"><a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a></li>
+      <ul class="pure-menu-children">
+      {{- with .Site.Menus.filter }}
+        {{- range . }}
+        <li class="pure-menu-item{{if or ($.IsMenuCurrent "filter" .) ($.HasMenuCurrent "filter" .) }} pure-menu-selected{{end}}">
+          <a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a>    
+        </li>
         {{- end }}
+        <li class="pure-menu-separator"></li>
+      {{- end }}
+      {{- range ($.Site.GetPage "taxonomyTerm" "tags").Pages.ByTitle }}
+        <li class="pure-menu-item{{ if eq $currentPage . }} pure-menu-selected{{ end }}"><a href="{{ .RelPermalink }}" class="pure-menu-link">{{ .Title }}</a></li>
+      {{- end }}
       </ul>
     </li>
   </ul>

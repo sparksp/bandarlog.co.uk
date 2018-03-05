@@ -8,9 +8,6 @@ tags = [
   "Travelling",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [social]
 facebook = "KenTheTravellingScoutKangaroo"
 

@@ -1,6 +1,7 @@
 +++
 title = "1st Bandar-log"
 description = "The 1st Bandar-log is a group of Scouting and Guiding mascots."
+icon = "fas fa-home"
 [menu.main]
   name = "Home"
 [author]

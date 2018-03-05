@@ -6,9 +6,6 @@ tags = [
   "SSAGO",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [social]
 facebook = "ScoguiTheBear"
 homepage = "http://scogui.org.uk/join-scogui/mascot"

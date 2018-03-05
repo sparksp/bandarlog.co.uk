@@ -11,9 +11,6 @@ tags = [
   "Guiding",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [social]
 facebook = "jamboreebear"
 twitter = "jamboreebear"

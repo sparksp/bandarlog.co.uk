@@ -44,6 +44,15 @@ body {
     left: 0;
     top: 0;
 }
+.topmenu .pull-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pure-menu-horizontal .pull-right .pure-menu-children {
+    left: auto;
+    right: 0;
+}
 .topmenu .pure-menu-heading {
     font-size: 1em;
     font-weight: bold;
@@ -63,16 +72,16 @@ body {
     color: black;
 }
 
-#main-menu-toggle {
+.topmenu .pure-menu-link {
     padding: .5em;
     cursor: pointer;
-}
-#main-menu-toggle:after {
-    font-size: 0;
 }
 .pure-menu-children {
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .3);
     z-index: 1;
+}
+.pure-menu-children .pure-menu-link {
+    padding: .5em 1em;
 }
 
 .footer {

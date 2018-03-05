@@ -8,9 +8,6 @@ tags = [
   "Adventure",
 ]
 
-[menu.main]
-parent = "Mascots"
-
 [author]
 facebook = "s.c.paget"
 
