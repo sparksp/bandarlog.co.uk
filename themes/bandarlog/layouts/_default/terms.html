@@ -1,9 +1,9 @@
 {{ define "header" }}
 <article>
-  <h2>{{ .Title }}</h2>
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
   <ul class="panel-body">
-    {{- range .Data.Pages }}
+    {{- range .Data.Pages.ByTitle }}
     <li><a href="{{ .RelPermalink }}">{{ .LinkTitle | markdownify }}</a></li>
     {{ end }}
   </ul>
