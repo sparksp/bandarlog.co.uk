@@ -1,0 +1,40 @@
+{{- with .Params.form }}
+{{ $form := . }}
+<form class="pure-form" name="{{ .name }}" method="{{ .method | default "POST" }}" netlify>
+{{- range .sections }}
+  <fieldset>
+  {{ if .label }}  <legend>{{ .label }}</legend>{{ end }}
+  {{- range .fields }}
+    {{ $.Scratch.Add "n" 1 }}
+    {{ $id := delimit (slice $form.name ($.Scratch.Get "n") .name) "-" }}
+    <div class="pure-control-group">
+      {{ if .label }}<label for="{{ $id }}" class="pure-label">{{ .label }}</label>{{ end }}
+      <label>{{ .pre }}
+      {{- if eq .type "string" }}
+      <input type="text" name="{{ .name }}" id="{{ $id }}" class="{{ .class | default "pure-u-1-2" }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}>
+      {{- else if eq .type "text" }}
+      <textarea name="{{ .name }}" id="{{ $id }}" class="pure-u-1"{{- if .required }} required{{ end -}}></textarea>
+      {{- else if eq .type "submit" }}
+      <button type="submit" class="pure-button pure-button-primary">{{ .value }}</button>
+      {{- else }}
+      <pre>{{- . -}}</pre>
+      {{- end }}
+      </label>
+    </div>
+  {{- end }}<!-- /fields -->
+  </fieldset>
+{{- end }}<!-- /sections -->
+{{- range .datalists }}
+<datalist id="{{ .id }}">
+  {{- range .options }}
+  <option value="{{ . }}">
+  {{- end }}
+  {{- if .taxonomy }}
+    {{- range ($.Site.GetPage "taxonomyTerm" .taxonomy).Pages.ByTitle }}
+    <option value="{{ .Title }}">
+    {{- end }}
+  {{- end }}
+</datalist>
+{{- end }}
+</form>
+{{- end }}
