@@ -16,16 +16,25 @@ label = "About You"
 name = "name"
 label = "What do people call you?"
 type = "string"
+class = "pure-u-1-2"
 required = true
 [[form.sections.fields]]
 name = "summary"
 label = "Describe yourself in one sentence:"
 type = "string"
+class = "pure-u-1"
 required = true
 [[form.sections.fields]]
 name = "story"
 label = "Tell me more about yourself, what's your story?"
 type = "text"
+class = "pure-u-1"
+required = true
+[[form.sections.fields]]
+name = "photo"
+label = "A photo of you in action"
+type = "file"
+accept = "image/*"
 required = true
 [[form.sections.fields]]
 name = "organisation"
@@ -91,6 +100,7 @@ label = "Website"
 name = "social-homepage"
 type = "string"
 placeholder = "https://"
+class = "pure-u-1-2"
 
 [[form.sections]]
 label = "If your owner is on Facebook or Twitter, where can I find them?"
