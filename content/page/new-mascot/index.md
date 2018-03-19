@@ -16,7 +16,7 @@ label = "About You"
 name = "name"
 label = "What do people call you?"
 type = "string"
-class = "pure-u-1-2"
+class = "pure-u-1 pure-u-md-1-2"
 required = true
 [[form.sections.fields]]
 name = "summary"
@@ -42,27 +42,32 @@ label = "Are you with any particular organisation or section?"
 type = "string"
 list = "organisations"
 placeholder = "Organisation"
+class = "pure-u-1 pure-u-md-1-2"
 [[form.sections.fields]]
 name = "section"
 type = "string"
 list = "sections"
 placeholder = "Section"
+class = "pure-u-1 pure-u-md-1-2"
 [[form.sections.fields]]
 label = "What are 3 of your interests?"
 list = "tags"
 name = "interests[]"
 placeholder = "e.g., Adventure"
 type = "string"
+class = "pure-u-1 pure-u-md-1-2"
 [[form.sections.fields]]
 list = "tags"
 name = "interests[]"
 placeholder = "e.g., Camping"
 type = "string"
+class = "pure-u-1 pure-u-md-1-2"
 [[form.sections.fields]]
 list = "tags"
 name = "interests[]"
 placeholder = "e.g., Journalism"
 type = "string"
+class = "pure-u-1 pure-u-md-1-2"
 
 [[form.sections]]
 label = "Where can we find you or your group online?"
@@ -72,35 +77,35 @@ label = "Geocaching"
 name = "social-geocaching"
 type = "string"
 pre = "https://coord.info/"
-class = " "
+class = "pure-u-1 pure-u-sm-3-8"
 
 [[form.sections.fields]]
 label = "Facebook"
 name = "social-facebook"
 type = "string"
 pre = "https://facebook.com/"
-class = " "
+class = "pure-u-1 pure-u-sm-3-8"
 
 [[form.sections.fields]]
 label = "Instagram"
 name = "social-instagram"
 type = "string"
 pre = "https://instagram.com/"
-class = " "
+class = "pure-u-1 pure-u-sm-3-8"
 
 [[form.sections.fields]]
 label = "Twitter"
 name = "social-twitter"
 type = "string"
 pre = "https://twitter.com/"
-class = " "
+class = "pure-u-1 pure-u-sm-3-8"
 
 [[form.sections.fields]]
 label = "Website"
 name = "social-homepage"
 type = "string"
 placeholder = "https://"
-class = "pure-u-1-2"
+class = "pure-u-1 pure-u-md-1-2"
 
 [[form.sections]]
 label = "If your owner is on Facebook or Twitter, where can I find them?"
@@ -110,14 +115,14 @@ label = "Facebook"
 name = "author-facebook"
 type = "string"
 pre = "https://facebook.com/"
-class = " "
+class = "pure-u-1 pure-u-sm-3-8"
 
 [[form.sections.fields]]
 label = "Twitter"
 name = "author-twitter"
 type = "string"
 pre = "https://twitter.com/"
-class = " "
+class = "pure-u-1 pure-u-sm-3-8"
 
 [[form.sections]]
 
