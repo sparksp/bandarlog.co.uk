@@ -10,7 +10,7 @@ draft = true
 name = "new-mascot"
 
 [[form.sections]]
-label = "About You"
+label = "Mascot Details"
 
     [[form.sections.fields]]
     name = "name"
@@ -33,12 +33,24 @@ label = "About You"
     class = "pure-u-1"
     required = true
 
+[[form.sections]]
+    label = "Mascot Photo"
+
     [[form.sections.fields]]
     name = "photo"
     label = "A photo of you in action"
     type = "file"
     accept = "image/*"
     required = true
+
+    [[form.sections.fields]]
+    name = "photo-description"
+    label = "Describe your photo"
+    type = "string"
+    class = "pure-u-1"
+
+[[form.sections]]
+    label = "Mascot Sorting"
 
     [[form.sections.fields]]
     name = "organisation"
