@@ -166,6 +166,7 @@ description = "Owner Facebook and Twitter are added to the hidden information ab
     [[form.sections.fields]]
     value = "Submit"
     type = "submit"
+    class = "pure-button-primary"
 
 [[form.datalists]]
 id = "organisations"
