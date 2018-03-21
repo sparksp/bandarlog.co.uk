@@ -6,6 +6,7 @@ icon = "fas fa-plus-circle"
 menu = "main"
 draft = true
 
+# Form appears below title and page content.
 [form]
 name = "new-mascot"
 
@@ -195,3 +196,4 @@ id = "tags"
 taxonomy = "tags"
 
 +++
+Each mascot is added to the website by [Monkey Phill](/monkey-phill/) personally.  Please complete the questionaire below, the results will be emailed to Phill and he'll draft a preview for you when he next gets a chance.
