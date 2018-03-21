@@ -90,7 +90,8 @@ label = "Mascot Details"
     class = "pure-u-1 pure-u-md-1-2"
 
 [[form.sections]]
-label = "Where can we find you or your group online?"
+label = "Mascot Links"
+description = "Where can we find you or your group online?"
 
     [[form.sections.fields]]
     label = "Geocaching"
@@ -128,7 +129,23 @@ label = "Where can we find you or your group online?"
     class = "pure-u-1 pure-u-md-1-2"
 
 [[form.sections]]
-label = "If your owner is on Facebook or Twitter, where can I find them?"
+label = "Mascot Owner"
+description = "We will not publish your name or email address, we will use them only to contact you about your mascot listing."
+
+    [[form.sections.fields]]
+    label = "Owner Name"
+    name = "author-name"
+    type = "string"
+    class = "pure-u-1 pure-u-md-1-2"
+
+    [[form.sections.fields]]
+    label = "Owner E-mail"
+    name = "author-email"
+    type = "email"
+    class = "pure-u-1 pure-u-md-1-2"
+
+[[form.sections]]
+description = "Owner Facebook and Twitter are added to the hidden information about your mascot, social networks sometimes use this information when people link to the mascot to context about the author."
 
     [[form.sections.fields]]
     label = "Facebook"

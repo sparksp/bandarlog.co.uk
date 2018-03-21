@@ -3,7 +3,8 @@
 <form class="pure-form" name="{{ .name }}" method="{{ .method | default "POST" }}" netlify>
 {{- range .sections }}
   <fieldset>
-  {{ if .label }}  <legend>{{ .label }}</legend>{{ end }}
+  {{ if .label }}<legend>{{ .label }}</legend>{{ end }}
+  {{ if .description }}{{ .description | markdownify }}{{ end }}
   {{- range .fields }}
     {{ $.Scratch.Add "n" 1 }}
     {{ $id := delimit (slice $form.name ($.Scratch.Get "n") .name) "-" }}
@@ -12,6 +13,8 @@
       <label>{{ .pre }}
       {{- if eq .type "string" }}
       <input type="text" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}>
+      {{- else if eq .type "email" }}
+      <input type="email" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}>
       {{- else if eq .type "text" }}
       <textarea name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" rows="{{ .rows | default "4" }}"{{- if .required }} required{{ end -}}></textarea>
       {{- else if eq .type "submit" }}
