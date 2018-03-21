@@ -1,7 +1,7 @@
 +++
 title = "Monkey Phill"
 date = 2018-01-27T22:26:36.000Z
-slug = "monkeyphill"
+aliases = ["monkeyphill"]
 description = "A Scout mascot from Leicester, UK."
 tags = [
   "Scouting",
