@@ -105,28 +105,28 @@ description = "Where can we find you or your group online?"
     name = "social-geocaching"
     type = "string"
     pre = "https://coord.info/"
-    class = "pure-u-1 pure-u-sm-3-8"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
     [[form.sections.fields]]
     label = "Facebook"
     name = "social-facebook"
     type = "string"
     pre = "https://facebook.com/"
-    class = "pure-u-1 pure-u-sm-3-8"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
     [[form.sections.fields]]
     label = "Instagram"
     name = "social-instagram"
     type = "string"
     pre = "https://instagram.com/"
-    class = "pure-u-1 pure-u-sm-3-8"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
     [[form.sections.fields]]
     label = "Twitter"
     name = "social-twitter"
     type = "string"
     pre = "https://twitter.com/"
-    class = "pure-u-1 pure-u-sm-3-8"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
     [[form.sections.fields]]
     label = "Website"
@@ -159,14 +159,14 @@ description = "Owner Facebook and Twitter are added to the hidden information ab
     name = "author-facebook"
     type = "string"
     pre = "https://facebook.com/"
-    class = "pure-u-1 pure-u-sm-3-8"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
     [[form.sections.fields]]
     label = "Twitter"
     name = "author-twitter"
     type = "string"
     pre = "https://twitter.com/"
-    class = "pure-u-1 pure-u-sm-3-8"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
 [[form.sections]]
 

@@ -3,27 +3,29 @@
 <form class="pure-form" name="{{ .name }}" method="{{ .method | default "POST" }}"{{ if .action }} action="{{ .action }}"{{ end }} netlify>
 {{- range .sections }}
   <fieldset>
-  {{ if .label }}<legend>{{ .label }}</legend>{{ end }}
+  {{- if .label }}
+    <legend>{{- .label -}}</legend>
+  {{- end }}
   {{ if .description }}{{ .description | markdownify }}{{ end }}
   {{- range .fields }}
-    {{ $.Scratch.Add "n" 1 }}
-    {{ $id := delimit (slice $form.name ($.Scratch.Get "n") .name) "-" }}
+    {{- $.Scratch.Add "n" 1 -}}
+    {{- $id := delimit (slice $form.name ($.Scratch.Get "n") .name) "-" -}}
     <div class="pure-control-group">
       {{ if .label }}<label for="{{ $id }}" class="pure-label">{{ .label }}</label>{{ end }}
-      <label>{{ .pre }}
-      {{- if eq .type "string" }}
+      <label class="{{ .inputClass }}"><span class="pre">{{- .pre -}}</span>
+      {{- if eq .type "string" -}}
       <input type="text" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}>
-      {{- else if eq .type "email" }}
+      {{- else if eq .type "email" -}}
       <input type="email" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}>
-      {{- else if eq .type "text" }}
+      {{- else if eq .type "text" -}}
       <textarea name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" rows="{{ .rows | default "4" }}"{{- if .required }} required{{ end -}}></textarea>
-      {{- else if eq .type "submit" }}
+      {{- else if eq .type "submit" -}}
       <button type="submit" class="pure-button {{ .class }}">{{ .value }}</button>
-      {{- else if eq .type "file" }}
+      {{- else if eq .type "file" -}}
       <input type="file" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}"{{- if .required }} required="required"{{ end -}}{{- if .accept }} accept="{{ .accept }}"{{ end -}}>
-      {{- else }}
+      {{- else -}}
       <pre>{{- . -}}</pre>
-      {{- end }}
+      {{- end -}}
       </label>
     </div>
   {{- end }}<!-- /fields -->
