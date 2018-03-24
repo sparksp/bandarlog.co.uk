@@ -1,6 +1,6 @@
 +++
 title = "Your form has been submitted!"
-url = "new-mascot-success"
+slug = "new-mascot-success"
 layout = "mascot"
 hidden = true
 

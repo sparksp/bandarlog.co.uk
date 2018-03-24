@@ -1,7 +1,7 @@
 +++
 title = "New Mascot"
 date = 2018-03-18T16:36:11Z
-url = "new-mascot"
+slug = "new-mascot"
 icon = "fas fa-plus-circle"
 menu = "main"
 draft = true
