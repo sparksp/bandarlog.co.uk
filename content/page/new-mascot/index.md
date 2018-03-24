@@ -9,6 +9,7 @@ draft = true
 # Form appears below title and page content.
 [form]
 name = "new-mascot"
+action = "/new-mascot-success/"
 
 [[form.sections]]
 label = "Mascot Details"

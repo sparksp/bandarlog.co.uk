@@ -23,7 +23,7 @@
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
     {{- end }}
   </head>
-  <body class="{{ .Section | default "special" }}-{{ .Kind }}">
+  <body class="{{ .Section | default "special" }}-{{ .Kind }} {{ .Layout | default "default" }}-page">
     <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu"><div class="container">
       {{ partial "main-menu.html" . }}
     </div></div>

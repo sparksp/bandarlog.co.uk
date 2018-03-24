@@ -94,18 +94,19 @@ body {
     margin: .5em 0;
 }
 
+.mascot-page .article,
 .mascot-section .article,
-.mascot-page .article {
-    background-color: green;
-    color: white;
-}
 .tags-taxonomy .article,
 .special-home .article {
-    background-color: navy;
+    background-color: steelblue;
+    color: white;
+}
+.mascot-page.page-page .article {
+    background-color: seagreen;
     color: white;
 }
 .special-404 .article {
-    background-color: darkred;
+    background-color: firebrick;
     color: white;
 }
 

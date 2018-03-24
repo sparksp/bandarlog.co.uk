@@ -1,6 +1,6 @@
 {{- with .Params.form }}
 {{ $form := . }}
-<form class="pure-form" name="{{ .name }}" method="{{ .method | default "POST" }}" netlify>
+<form class="pure-form" name="{{ .name }}" method="{{ .method | default "POST" }}"{{ if .action }} action="{{ .action }}"{{ end }} netlify>
 {{- range .sections }}
   <fieldset>
   {{ if .label }}<legend>{{ .label }}</legend>{{ end }}
