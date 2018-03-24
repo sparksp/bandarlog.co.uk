@@ -4,7 +4,12 @@ date = 2018-03-18T16:36:11Z
 slug = "new-mascot"
 icon = "fas fa-plus-circle"
 menu = "main"
-draft = true
+
+[[resources]]
+src = "monkey-coding.jpg"
+title = "Monkey Phill writing code for the Bandar-log website."
+    [resources.params]
+    show = false
 
 # Form appears below title and page content.
 [form]

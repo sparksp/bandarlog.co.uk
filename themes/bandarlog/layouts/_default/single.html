@@ -2,7 +2,7 @@
 <article>
   <h1>{{ .Title }}</h1>
 
-  {{- with .Resources.ByType "image" }}
+  {{- with where (.Resources.ByType "image") "Params.show" "ne" false }}
   <aside>
   {{- range . }}
   {{- $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
@@ -12,6 +12,7 @@
   {{- end }}
 
   {{ .Content }}
+
   {{- partial "form" . }}
 </article>
 {{ end }}
