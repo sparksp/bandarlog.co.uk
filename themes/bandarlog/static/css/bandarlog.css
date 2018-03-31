@@ -204,3 +204,7 @@ legend { /* = h2 */
     padding: 0;
     width: 100%;
 }
+.pure-form .pure-input.has-error, .pure-form input.has-error {
+    border-color: red;
+    color: rgb(198, 53, 63);
+}
