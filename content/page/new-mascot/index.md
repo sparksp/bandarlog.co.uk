@@ -24,6 +24,17 @@ label = "Mascot Details"
     label = "What do people call you?"
     type = "string"
     class = "pure-u-1 pure-u-md-1-2"
+    id = "new-mascot-name"
+    required = true
+
+    [[form.sections.fields]]
+    name = "username"
+    label = "Mascot username"
+    type = "string"
+    pre = "https://bandarlog.co.uk/"
+    inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
+    class = "username"
+    data = "data-input=\"new-mascot-name\""
     required = true
 
     [[form.sections.fields]]
