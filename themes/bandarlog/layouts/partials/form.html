@@ -14,15 +14,15 @@
       {{ if .label }}<label for="{{ default $id }}" class="pure-label">{{ .label }}</label>{{ end }}
       <label class="{{ .inputClass }}"><span class="pre">{{- .pre -}}</span>
       {{- if eq .type "string" -}}
-      <input type="text" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
+      <input type="text" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}" autocomplete="{{ .autocomplete }}"{{- if .required }} required{{ end -}}{{ if .list }} list="{{ .list }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
       {{- else if eq .type "email" -}}
-      <input type="email" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
+      <input type="email" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}" autocomplete="{{ .autocomplete }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
       {{- else if eq .type "text" -}}
-      <textarea name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" rows="{{ .rows | default "4" }}"{{- if .required }} required{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}></textarea>
+      <textarea name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" rows="{{ .rows | default "4" }}" autocomplete="{{ .autocomplete }}"{{- if .required }} required{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}></textarea>
       {{- else if eq .type "submit" -}}
       <button type="submit" class="pure-button {{ .class }}"{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>{{ .value }}</button>
       {{- else if eq .type "file" -}}
-      <input type="file" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}"{{- if .required }} required="required"{{ end -}}{{- if .accept }} accept="{{ .accept }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
+      <input type="file" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" {{- if .required }} required="required"{{ end -}}{{- if .accept }} accept="{{ .accept }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
       {{- else -}}
       <pre>{{- . -}}</pre>
       {{- end -}}

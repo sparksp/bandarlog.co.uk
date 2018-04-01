@@ -23,6 +23,7 @@ label = "Mascot Details"
     name = "name"
     label = "What do people call you?"
     type = "string"
+    autocomplete = "section-mascot name"
     class = "pure-u-1 pure-u-md-1-2"
     id = "new-mascot-name"
     required = true
@@ -31,6 +32,7 @@ label = "Mascot Details"
     name = "username"
     label = "Mascot username"
     type = "string"
+    autocomplete = "section-mascot username"
     pre = "https://bandarlog.co.uk/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
     class = "username"
@@ -41,6 +43,7 @@ label = "Mascot Details"
     name = "summary"
     label = "Describe yourself in one sentence:"
     type = "string"
+    autocomplete = "section-mascot"
     class = "pure-u-1"
     required = true
 
@@ -48,6 +51,7 @@ label = "Mascot Details"
     name = "story"
     label = "Tell me more about yourself, what's your story?"
     type = "text"
+    autocomplete = "section-mascot"
     class = "pure-u-1"
     required = true
 
@@ -59,12 +63,14 @@ label = "Mascot Details"
     label = "A photo of you in action"
     type = "file"
     accept = "image/*"
+    autocomplete = "section-mascot"
     required = true
 
     [[form.sections.fields]]
     name = "photo-description"
     label = "Describe your photo"
     type = "string"
+    autocomplete = "section-mascot"
     class = "pure-u-1"
 
 [[form.sections]]
@@ -74,6 +80,7 @@ label = "Mascot Details"
     name = "organisation"
     label = "Are you with any particular organisation or section?"
     type = "string"
+    autocomplete = "section-mascot organization"
     list = "organisations"
     placeholder = "Organisation"
     class = "pure-u-1 pure-u-md-1-2"
@@ -81,6 +88,7 @@ label = "Mascot Details"
     [[form.sections.fields]]
     name = "section"
     type = "string"
+    autocomplete = "section-mascot"
     list = "sections"
     placeholder = "Section"
     class = "pure-u-1 pure-u-md-1-2"
@@ -91,6 +99,7 @@ label = "Mascot Details"
     name = "interests[]"
     placeholder = "e.g., Adventure"
     type = "string"
+    autocomplete = "section-mascot"
     class = "pure-u-1 pure-u-md-1-2"
 
     [[form.sections.fields]]
@@ -98,6 +107,7 @@ label = "Mascot Details"
     name = "interests[]"
     placeholder = "e.g., Camping"
     type = "string"
+    autocomplete = "section-mascot"
     class = "pure-u-1 pure-u-md-1-2"
 
     [[form.sections.fields]]
@@ -105,6 +115,7 @@ label = "Mascot Details"
     name = "interests[]"
     placeholder = "e.g., Journalism"
     type = "string"
+    autocomplete = "section-mascot"
     class = "pure-u-1 pure-u-md-1-2"
 
 [[form.sections]]
@@ -115,6 +126,7 @@ description = "Where can we find you or your group online?"
     label = "Geocaching"
     name = "social-geocaching"
     type = "string"
+    autocomplete = "section-mascot"
     pre = "https://coord.info/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
@@ -122,6 +134,7 @@ description = "Where can we find you or your group online?"
     label = "Facebook"
     name = "social-facebook"
     type = "string"
+    autocomplete = "section-mascot"
     pre = "https://facebook.com/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
@@ -129,6 +142,7 @@ description = "Where can we find you or your group online?"
     label = "Instagram"
     name = "social-instagram"
     type = "string"
+    autocomplete = "section-mascot"
     pre = "https://instagram.com/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
@@ -136,6 +150,7 @@ description = "Where can we find you or your group online?"
     label = "Twitter"
     name = "social-twitter"
     type = "string"
+    autocomplete = "section-mascot"
     pre = "https://twitter.com/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
@@ -143,6 +158,7 @@ description = "Where can we find you or your group online?"
     label = "Website"
     name = "social-homepage"
     type = "string"
+    autocomplete = "section-mascot url"
     placeholder = "https://"
     class = "pure-u-1 pure-u-md-1-2"
 
@@ -154,12 +170,14 @@ description = "We will not publish your name or email address, we will use them 
     label = "Owner Name"
     name = "author-name"
     type = "string"
+    autocomplete = "section-owner name"
     class = "pure-u-1 pure-u-md-1-2"
 
     [[form.sections.fields]]
     label = "Owner E-mail"
     name = "author-email"
     type = "email"
+    autocomplete = "section-owner email"
     class = "pure-u-1 pure-u-md-1-2"
 
 [[form.sections]]
@@ -169,6 +187,7 @@ description = "Owner Facebook and Twitter are added to the hidden information ab
     label = "Facebook"
     name = "author-facebook"
     type = "string"
+    autocomplete = "section-owner"
     pre = "https://facebook.com/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
@@ -176,6 +195,7 @@ description = "Owner Facebook and Twitter are added to the hidden information ab
     label = "Twitter"
     name = "author-twitter"
     type = "string"
+    autocomplete = "section-owner"
     pre = "https://twitter.com/"
     inputClass = "pure-input pure-u-1 pure-u-sm-1-2"
 
