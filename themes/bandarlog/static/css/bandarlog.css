@@ -202,7 +202,9 @@ legend { /* = h2 */
     flex-grow: 1;
     margin: 0;
     padding: 0;
-    width: 100%;
+}
+.pure-form .pure-input .pre {
+    flex-shrink: 0;
 }
 .pure-form .pure-input.has-error, .pure-form input.has-error {
     border-color: red;
