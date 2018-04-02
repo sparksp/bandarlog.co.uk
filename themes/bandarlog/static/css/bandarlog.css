@@ -210,3 +210,8 @@ legend { /* = h2 */
     border-color: red;
     color: rgb(198, 53, 63);
 }
+
+img.preview {
+    display: block;
+    margin-bottom: .5em;
+}

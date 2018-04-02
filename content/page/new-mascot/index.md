@@ -60,9 +60,11 @@ label = "Mascot Details"
     type = "file"
     accept = "image/*"
     required = true
+    data = "data-description-input=\"new-mascot-photo-description\""
 
     [[form.sections.fields]]
     name = "photo-description"
+    id = "new-mascot-photo-description"
     label = "Describe your photo"
     type = "string"
     class = "pure-u-1"
