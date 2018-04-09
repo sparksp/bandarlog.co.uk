@@ -30,6 +30,7 @@ googleAnalytics = "off"
 
 [permalinks]
   mascot = "/:slug/"
+  page = "/:slug/"
 
 [Params.Author]
   Name = "Phill Sparks"

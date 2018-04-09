@@ -18,12 +18,16 @@
     <link rel="stylesheet" href="{{ "/css/bandarlog.css" | relURL }}" media="screen">
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <script defer src="{{ "/js/menu.js" | relURL }}"></script>
+    <script defer src="{{ "/js/polyfill/classList.js" | relURL }}"></script>
+    <script defer src="{{ "/js/polyfill/closest.js" | relURL }}"></script>
+    <script defer src="{{ "/js/photo-input.js" | relURL }}"></script>
+    <script defer src="{{ "/js/username-input.js" | relURL }}"></script>
     <link rel="self" href="{{ .Permalink }}" title="{{ .Title }}">
     {{- range .AlternativeOutputFormats }}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
     {{- end }}
   </head>
-  <body class="{{ .Section | default "special" }}-{{ .Kind }}">
+  <body class="{{ .Section | default "special" }}-{{ .Kind }} {{ .Layout | default "default" }}-page">
     <div class="topmenu" id="main-menu" role="navigation" aria-expanded="false" aria-label="Main menu"><div class="container">
       {{ partial "main-menu.html" . }}
     </div></div>

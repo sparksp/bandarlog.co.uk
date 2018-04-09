@@ -6,7 +6,7 @@
   HUGO_VERSION = "0.37"
 
 [context.deploy-preview]
-  command = "hugo --i18n-warnings -b $DEPLOY_PRIME_URL"
+  command = "hugo --i18n-warnings --buildDrafts -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
   HUGO_GOOGLEANALYTICS = "off"

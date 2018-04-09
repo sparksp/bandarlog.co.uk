@@ -1,0 +1,47 @@
+{{- with .Params.form }}
+{{ $form := . }}
+<form class="pure-form" name="{{ .name }}" method="{{ .method | default "POST" }}"{{ if .action }} action="{{ .action }}"{{ end }} netlify>
+{{- range .sections }}
+  <fieldset>
+  {{- if .label }}
+    <legend>{{- .label -}}</legend>
+  {{- end }}
+  {{ if .description }}{{ .description | markdownify }}{{ end }}
+  {{- range .fields }}
+    {{- $.Scratch.Add "n" 1 -}}
+    {{- $id := .id | default (delimit (slice $form.name ($.Scratch.Get "n") .name) "-") -}}
+    <div class="pure-control-group">
+      {{ if .label }}<label for="{{ default $id }}" class="pure-label">{{ .label }}</label>{{ end }}
+      <label class="{{ .inputClass }}"><span class="pre">{{- .pre -}}</span>
+      {{- if eq .type "string" -}}
+      <input type="text" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}" autocomplete="{{ .autocomplete }}"{{- if .required }} required{{ end -}}{{ if .list }} list="{{ .list }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
+      {{- else if eq .type "email" -}}
+      <input type="email" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" placeholder="{{ .placeholder }}" autocomplete="{{ .autocomplete }}"{{- if .required }} required{{ end -}}{{- if .list }} list="{{ .list }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
+      {{- else if eq .type "text" -}}
+      <textarea name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" rows="{{ .rows | default "4" }}" autocomplete="{{ .autocomplete }}"{{- if .required }} required{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}></textarea>
+      {{- else if eq .type "submit" -}}
+      <button type="submit" class="pure-button {{ .class }}"{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>{{ .value }}</button>
+      {{- else if eq .type "file" -}}
+      <input type="file" name="{{ .name }}" id="{{ $id }}" class="{{ .class }}" {{- if .required }} required="required"{{ end -}}{{- if .accept }} accept="{{ .accept }}"{{ end -}}{{- if .data }} {{ safeHTMLAttr .data }}{{ end -}}>
+      {{- else -}}
+      <pre>{{- . -}}</pre>
+      {{- end -}}
+      </label>
+    </div>
+  {{- end }}<!-- /fields -->
+  </fieldset>
+{{- end }}<!-- /sections -->
+{{- range .datalists }}
+<datalist id="{{ .id }}">
+  {{- range .options }}
+  <option value="{{ . }}">
+  {{- end }}
+  {{- if .taxonomy }}
+    {{- range ($.Site.GetPage "taxonomyTerm" .taxonomy).Pages.ByTitle }}
+    <option value="{{ .Title }}">
+    {{- end }}
+  {{- end }}
+</datalist>
+{{- end }}
+</form>
+{{- end }}

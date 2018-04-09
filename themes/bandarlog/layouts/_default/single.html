@@ -2,15 +2,17 @@
 <article>
   <h1>{{ .Title }}</h1>
 
-  {{- with .Resources.ByType "image" }}
+  {{- with where (.Resources.ByType "image") "Params.show" "ne" false }}
   <aside>
   {{- range . }}
-  {{ $image := .Fill "300x300 center" }}
+  {{- $image := .Fill (delimit (slice (.Params.anchor | default "") "300x300" "q75") " " | string) }}
     <img src="{{ $image.RelPermalink }}" alt="{{ $image.Title }}" width="{{ $image.Width }}" height="{{ $image.Height }}" class="pure-img pull-right">
   {{- end }}
   </aside>
   {{- end }}
 
   {{ .Content }}
+
+  {{- partial "form" . }}
 </article>
 {{ end }}
