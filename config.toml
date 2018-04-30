@@ -4,7 +4,7 @@ title = "1st Bandar-log"
 theme = "bandarlog"
 enableRobotsTxt = true
 enableGitInfo = true
-googleAnalytics = "off"
+googleAnalytics = "UA-2556883-6"
 
 [[menu.footer]]
   identifier = "design-by"
