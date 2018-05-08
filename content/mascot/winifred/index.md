@@ -4,7 +4,7 @@ date = 2018-03-06T11:35:33Z
 description = "A SSAGO mascot from Swansea, UK."
 tags = [
   "SSAGO",
-  "Guiding",
+  "Girlguiding",
   "Badges",
 ]
 
