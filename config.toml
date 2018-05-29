@@ -7,6 +7,22 @@ enableGitInfo = true
 googleAnalytics = "UA-2556883-6"
 copyright = "Copyright (c) 2018-2020 Phill Sparks. All Rights Reserved."
 
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.speakerDeck]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
 [[menu.footer]]
   identifier = "design-by"
   name = "Phill Sparks"
