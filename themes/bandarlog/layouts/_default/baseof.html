@@ -15,13 +15,11 @@
     {{ .Hugo.Generator }}
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" integrity="sha384-b92sF+wDNTHrfEtRaYo+EpcA8FUyHOSXrdxKc9XB9kaaX1rSQAgMevW6cYeE5Bdv" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ "/css/bandarlog.css" | relURL }}" media="screen">
+    {{- $style := resources.Get "css/bandarlog.css" | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-    <script defer src="{{ "/js/menu.js" | relURL }}"></script>
-    <script defer src="{{ "/js/polyfill/classList.js" | relURL }}"></script>
-    <script defer src="{{ "/js/polyfill/closest.js" | relURL }}"></script>
-    <script defer src="{{ "/js/photo-input.js" | relURL }}"></script>
-    <script defer src="{{ "/js/username-input.js" | relURL }}"></script>
+    {{- partial "scripts" (dict "page" . "scripts" (slice "/js/menu.js" "/js/polyfill/classList.js" "/js/polyfill/closest.js" "/js/photo-input.js" "/js/username-input.js")) }}
+
     <link rel="self" href="{{ .Permalink }}" title="{{ .Title }}">
     {{- range .AlternativeOutputFormats }}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
