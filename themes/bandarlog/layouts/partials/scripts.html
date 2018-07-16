@@ -1,0 +1,6 @@
+{{- range .scripts }}
+{{- $.page.Scratch.Add "scripts" (slice (resources.Get .)) }}
+{{- end }}
+
+{{- $script := $.page.Scratch.Get "scripts" | resources.Concat "bandarlog.js" | minify | fingerprint }}
+<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
