@@ -23,16 +23,17 @@
   <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}">
   <meta property="article:modified_time" content="{{ .Lastmod }}">
 {{- end }}
+{{- $description := "" }}
 {{- if .Description }}
-{{- $.Scratch.Set "description" .Description }}
+{{- $description = .Description }}
 {{- else }}{{ if .IsPage }}
-{{- $.Scratch.Set "description" .Summary }}
+{{- $description = .Summary }}
 {{- end }}{{ end }}
-{{- if $.Scratch.Get "description" }}
-  <meta name="description" content="{{ $.Scratch.Get "description" }}">
-  <meta itemprop="description" content="{{ $.Scratch.Get "description" }}">
+{{- if ne $description "" }}
+  <meta name="description" content="{{ $description }}">
+  <meta itemprop="description" content="{{ $description }}">
   {{- if or .IsPage .IsHome }}
-    <meta property="og:description" content="{{ $.Scratch.Get "description" }}">
+    <meta property="og:description" content="{{ $description }}">
   {{- end }}
 {{- end }}
 {{- with .Keywords }}
