@@ -215,3 +215,13 @@ img.preview {
     display: block;
     margin-bottom: .5em;
 }
+
+.read-more {
+    font-size: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.read-more:target {
+    font-size: inherit;
+    opacity: 1;
+}
