@@ -4,7 +4,6 @@ title = "1st Bandar-log"
 theme = "bandarlog"
 enableRobotsTxt = true
 enableGitInfo = true
-googleAnalytics = "UA-2556883-6"
 copyright = "Copyright (c) 2018-2020 Phill Sparks. All Rights Reserved."
 
 [privacy]
