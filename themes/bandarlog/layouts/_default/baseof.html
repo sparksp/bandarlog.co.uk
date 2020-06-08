@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" integrity="sha384-b92sF+wDNTHrfEtRaYo+EpcA8FUyHOSXrdxKc9XB9kaaX1rSQAgMevW6cYeE5Bdv" crossorigin="anonymous">
     {{- $style := resources.Get "css/bandarlog.css" | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
     {{- partial "scripts" (dict "page" . "scripts" (slice "/js/menu.js" "/js/polyfill/classList.js" "/js/polyfill/closest.js" "/js/photo-input.js" "/js/username-input.js")) }}
 
     <link rel="self" href="{{ .Permalink }}" title="{{ .Title }}">
