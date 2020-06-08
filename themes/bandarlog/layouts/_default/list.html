@@ -6,7 +6,7 @@
 {{ end }}
 {{ define "content" }}
   <div class="mascot-list">
-  {{ range where .Data.Pages "Params.hidden" "!=" true }}
+  {{ range where .Pages "Params.hidden" "!=" true }}
     {{ $page := . }}
     {{- range .Resources.ByType "image" | first 1 }}
     {{ partial "mascot-item.html" (dict "page" $page "image" . )}}
