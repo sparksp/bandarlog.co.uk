@@ -54,8 +54,8 @@
 {{- if .Params.Author.Facebook }}
 <meta property="article:author" content="https://www.facebook.com/{{ .Params.Author.Facebook }}">
 {{- end }}
-{{- range .Params.tags }}
-  <meta property="article:tag" content="{{ . }}">
+{{- range .GetTerms "tags" }}
+  <meta property="article:tag" content="{{ .LinkTitle }}">
 {{- end }}
 {{- if gt .WordCount 0 }}
 <meta itemprop="wordCount" content="{{ .WordCount }}">

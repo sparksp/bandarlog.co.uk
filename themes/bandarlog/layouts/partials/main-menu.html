@@ -23,10 +23,11 @@
         {{- end }}
         <li class="pure-menu-separator"></li>
       {{- end }}
+      {{- $currentPageTags := $currentPage.GetTerms "tags" -}}
       {{- range (site.GetPage "/tags").Pages.ByTitle }}
       <!-- Show tag when: it's the current page, it's tagged by the current page, it has more than 1 mascot -->
-      {{- if or (eq $currentPage .) (in $currentPage.Params.tags .Title) (gt (len .Pages) 1) }}
-        <li class="pure-menu-item{{ if or (eq $currentPage .) (in $currentPage.Params.tags .Title) }} pure-menu-selected{{ end }}"><a href="{{ .RelPermalink }}" class="pure-menu-link">{{ .Title }} ({{ (len .Pages) }})</a></li>
+      {{- if or (eq $currentPage .) (in $currentPageTags .) (gt (len .Pages) 1) }}
+        <li class="pure-menu-item{{ if or (eq $currentPage .) (in $currentPageTags .) }} pure-menu-selected{{ end }}"><a href="{{ .RelPermalink }}" class="pure-menu-link">{{ .Title }} ({{ (len .Pages) }})</a></li>
       {{- end }}
       {{- end }}
       </ul>
