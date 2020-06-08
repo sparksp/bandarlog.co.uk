@@ -217,4 +217,4 @@ id = "tags"
 taxonomy = "tags"
 
 +++
-Each mascot is added to the website by [Monkey Phill](/monkey-phill/) personally.  Please complete the questionaire below, the results will be emailed to Phill and he'll draft a preview for you when he next gets a chance.
+Each mascot is added to the website by [Monkey Phill](/monkey-phill/) personally.  Please read our [Privacy Policy](/privacy-policy/) and then complete the questionaire below, the results will be emailed to Phill and he'll draft a preview for you when he gets a chance.

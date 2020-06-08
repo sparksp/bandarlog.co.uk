@@ -8,11 +8,5 @@
 [context.deploy-preview]
   command = "hugo --i18n-warnings --buildDrafts -b $DEPLOY_PRIME_URL"
 
-[context.deploy-preview.environment]
-  HUGO_GOOGLEANALYTICS = "off"
-
 [context.branch-deploy]
   command = "hugo --i18n-warnings --buildDrafts -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy.environment]
-  HUGO_GOOGLEANALYTICS = "off"
