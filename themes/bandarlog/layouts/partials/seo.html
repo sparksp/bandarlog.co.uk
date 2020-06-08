@@ -4,8 +4,8 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{- if .Params.Social.Twitter }}
 <meta name="twitter:site" content="@{{ .Params.Social.Twitter }}">
-{{- else if .Site.Params.Twitter }}
-<meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
+{{- else if site.Params.Twitter }}
+<meta name="twitter:site" content="@{{ site.Params.Twitter }}">
 {{- end }}
 {{- if .Params.Author.Twitter }}
 <meta name="twitter:creator" content="@{{ .Params.Author.Twitter }}">
@@ -46,7 +46,7 @@
   {{- end }}
 {{- end }}
 {{- if .IsPage }}
-  {{- with .Site.Title }}
+  {{- with site.Title }}
     <meta property="og:site_name" content="{{ . }}">
   {{- end }}
   <meta property="article:section" content="{{ .CurrentSection.Title }}">
@@ -54,8 +54,8 @@
 {{- if .Params.Author.Facebook }}
 <meta property="article:author" content="https://www.facebook.com/{{ .Params.Author.Facebook }}">
 {{- end }}
-{{- range .Params.tags }}
-  <meta property="article:tag" content="{{ . }}">
+{{- range .GetTerms "tags" }}
+  <meta property="article:tag" content="{{ .LinkTitle }}">
 {{- end }}
 {{- if gt .WordCount 0 }}
 <meta itemprop="wordCount" content="{{ .WordCount }}">

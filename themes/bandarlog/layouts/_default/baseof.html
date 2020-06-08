@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.LanguageCode }}">
+<html prefix="og: http://ogp.me/ns#" lang="{{ site.LanguageCode }}">
   <head>
     <meta charset="utf-8">
     <meta name="msapplication-config" content="none">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ .Site.Params.Author.name }}">
-    <meta name="dcterms.rights" content="Copyright (c) {{ .Site.Params.Author.name }}. All rights reserved.">
+    <meta name="author" content="{{ site.Params.Author.name }}">
+    <meta name="dcterms.rights" content="{{ site.Copyright }}">
     <meta name="Content-Type" content="text/html; charset=UTF-8">
     <title>{{ block "title" . }}
-      {{- .Title }} - {{ .Site.Title -}}
+      {{- .Title }} - {{ site.Title -}}
     {{ end }}</title>
     {{- partial "seo" . }}
     {{- partial "favicon" . }}
-    {{ .Hugo.Generator }}
+    {{ hugo.Generator }}
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" integrity="sha384-b92sF+wDNTHrfEtRaYo+EpcA8FUyHOSXrdxKc9XB9kaaX1rSQAgMevW6cYeE5Bdv" crossorigin="anonymous">
     {{- $style := resources.Get "css/bandarlog.css" | minify | fingerprint -}}
@@ -45,14 +45,14 @@
         {{- if .IsPage }}
         <i class="fa fa-calendar" title="Posted on"></i> <time datetime="{{ .Date }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>.
         {{- end }}
-        {{- range .Site.Menus.footer }}
+        {{- range site.Menus.footer }}
         {{ .Pre }} <a href="{{ .URL }}">{{ .Name }}</a>.
         {{- end }}
       </p>
     </div></div>
     {{- end }}
 
-    {{ if ne .Site.GoogleAnalytics "off" }}
+    {{ if ne site.GoogleAnalytics "off" }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
   </body>

@@ -1,7 +1,7 @@
-{{- with .Params.tags }}
+{{- with .GetTerms "tags" }}
   <p><i class="fa fa-tags" title="{{ . | len | i18n "Tags" }}"></i>
   {{- range . }}
-    <a href="{{ "tags/" | relURL }}{{ . | urlize }}" class="tag tag-{{ . | urlize }}">{{ . }}</a>
+    <a href="{{ .Permalink }}" class="tag">{{ .LinkTitle }}</a>
   {{- end }}
   </p>
 {{- end }}

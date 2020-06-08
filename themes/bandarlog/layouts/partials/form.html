@@ -37,7 +37,7 @@
   <option value="{{ . }}">
   {{- end }}
   {{- if .taxonomy }}
-    {{- range ($.Site.GetPage "taxonomyTerm" .taxonomy).Pages.ByTitle }}
+    {{- range (site.GetPage (printf "/%s" .taxonomy)).Pages.ByTitle }}
     <option value="{{ .Title }}">
     {{- end }}
   {{- end }}

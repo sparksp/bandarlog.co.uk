@@ -9,7 +9,7 @@
 {{ end }}
 {{ define "content" }}
     <div class="mascot-list">
-        {{- range (where .Data.Pages "Section" "mascot") | first 2 }}
+        {{- range (where site.Pages "Section" "mascot") | first 2 }}
         {{- $page := . }}
         {{- range .Resources.ByType "image" | first 1 }}
         {{ partial "mascot-item.html" (dict "page" $page "image" . )}}
@@ -17,7 +17,7 @@
         {{- end }}
 
         {{- $more := .Resources.GetMatch "more-mascots" }}
-        {{- $page := .Site.GetPage "section" "mascot" }}
+        {{- $page := site.GetPage "/mascot" }}
         {{ partial "mascot-item.html" (dict "page" $page "image" $more "name" "More Mascots" )}}
     </div>
 {{ end }}
