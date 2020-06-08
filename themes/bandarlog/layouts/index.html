@@ -17,7 +17,7 @@
         {{- end }}
 
         {{- $more := .Resources.GetMatch "more-mascots" }}
-        {{- $page := .Site.GetPage "section" "mascot" }}
+        {{- $page := site.GetPage "section" "mascot" }}
         {{ partial "mascot-item.html" (dict "page" $page "image" $more "name" "More Mascots" )}}
     </div>
 {{ end }}

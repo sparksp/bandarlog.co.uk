@@ -1,10 +1,10 @@
 {{ define "title" }}
-{{- with .Site.GetPage "page" "404/index.md" }}
-{{ .Title }} - {{ .Site.Title }}
+{{- with site.GetPage "page" "404/index.md" }}
+{{ .Title }} - {{ site.Title }}
 {{- end }}
 {{ end }}
 {{ define "content" }}
-{{- with .Site.GetPage "page" "404/index.md" }}
+{{- with site.GetPage "page" "404/index.md" }}
 {{ partial "mascot.html" . }}
 {{- end }}
 {{ end }}

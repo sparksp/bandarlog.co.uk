@@ -4,8 +4,8 @@
 <meta property="og:url" content="{{ .Permalink }}">
 {{- if .Params.Social.Twitter }}
 <meta name="twitter:site" content="@{{ .Params.Social.Twitter }}">
-{{- else if .Site.Params.Twitter }}
-<meta name="twitter:site" content="@{{ .Site.Params.Twitter }}">
+{{- else if site.Params.Twitter }}
+<meta name="twitter:site" content="@{{ site.Params.Twitter }}">
 {{- end }}
 {{- if .Params.Author.Twitter }}
 <meta name="twitter:creator" content="@{{ .Params.Author.Twitter }}">
@@ -46,7 +46,7 @@
   {{- end }}
 {{- end }}
 {{- if .IsPage }}
-  {{- with .Site.Title }}
+  {{- with site.Title }}
     <meta property="og:site_name" content="{{ . }}">
   {{- end }}
   <meta property="article:section" content="{{ .CurrentSection.Title }}">

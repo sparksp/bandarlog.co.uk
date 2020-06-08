@@ -1,7 +1,7 @@
 {{- with .Params.social }}
 <div class="social-menu pure-menu pure-menu-horizontal"><ul class="pure-menu-list">
 {{- range $name, $href := . }}
-{{- $data := index $.Site.Data.social $name | default $.Site.Data.social.default }}
+{{- $data := index site.Data.social $name | default site.Data.social.default }}
 {{- $format := index $data "format" | default "%s" }}
 {{- $icon := index $data "icon" | default "fa fa-link" }}
 {{- $title := index $data "title" | default $name }}
