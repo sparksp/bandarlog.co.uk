@@ -3,7 +3,7 @@
   command = "hugo -b $URL"
 
 [build.environment]
-  HUGO_VERSION = "0.72.0"
+  HUGO_VERSION = "0.85.0"
 
 [context.deploy-preview]
   command = "hugo --i18n-warnings --buildDrafts -b $DEPLOY_PRIME_URL"
